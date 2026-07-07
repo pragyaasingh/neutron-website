@@ -606,9 +606,9 @@ body{
 
 .orbit-title span{
     font-family:'Sora',sans-serif;
-    font-size:78px;
+    font-size:clamp(28px,7.5vw,78px);
     font-weight:800;
-    letter-spacing:18px;
+    letter-spacing:clamp(3px,1.8vw,18px);
     color:#86E8FF;
     text-transform:uppercase;
 
@@ -884,6 +884,12 @@ margin-top:10px;
 .mname{margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:22px;font-weight:700;letter-spacing:.08em;color:var(--text-hi);}
 .mrole{margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:20px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);}
 @media(max-width:640px){.avatar{width:96px;height:96px;}.mname{font-size:13px;}}
+@media(max-width:640px){
+    .section-label{font-size:16px;letter-spacing:.12em;white-space:normal;text-align:center;padding:0 16px;}
+    #t2526-kavya{min-width:0;}
+    #t2526-kavya .mname{white-space:normal;}
+    .memory-title-2425{font-size:clamp(30px,10vw,72px);}
+}
 @media(max-width:768px){
     .tg-row,.leadership-row,.dual-groups,.team-group,.tg-members,.group-members,.five-members,.faculty-row{
         flex-wrap:wrap;
@@ -1094,645 +1100,43 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 </nav>
 
 <!-- ====== HOME ====== -->
-<div class="view" id="view-home">
-  <section class="hero-section">
-    <div class="orb orb1"></div><div class="orb orb2"></div><div class="orb orb3"></div>
-    <div class="star-layer" id="css-stars"></div>
-    <div class="hero-sphere">
-      <div class="atmosphere"></div>
-      <div class="sphere-base"></div>
-      <div class="sphere-glow"></div>
-</div>
-    <div class="wordmark-wrap">
-      <span class="wordmark" data-text="NEUTRON">NEUTRON</span>
-    </div>
-    <div class="hero-marquee">
-  <div class="hero-marquee-track">
-    <div class="hero-marquee-group">
-      <div class="hero-marquee-item">The Game Development Club of IGDTUW <span class="hero-marquee-dot">✦</span> under the aegis of <span class="accent-m">ACM Student Chapter</span> <span class="hero-marquee-dot">✦</span></div>
-      <div class="hero-marquee-item">The Game Development Club of IGDTUW <span class="hero-marquee-dot">✦</span> under the aegis of <span class="accent-m">ACM Student Chapter</span> <span class="hero-marquee-dot">✦</span></div>
-      <div class="hero-marquee-item">The Game Development Club of IGDTUW <span class="hero-marquee-dot">✦</span> under the aegis of <span class="accent-m">ACM Student Chapter</span> <span class="hero-marquee-dot">✦</span></div>
-      <div class="hero-marquee-item">The Game Development Club of IGDTUW <span class="hero-marquee-dot">✦</span> under the aegis of <span class="accent-m">ACM Student Chapter</span> <span class="hero-marquee-dot">✦</span></div>
-    </div>
-    <div class="hero-marquee-group" aria-hidden="true">
-      <div class="hero-marquee-item">The Game Development Club of IGDTUW <span class="hero-marquee-dot">✦</span> under the aegis of <span class="accent-m">ACM Student Chapter</span> <span class="hero-marquee-dot">✦</span></div>
-      <div class="hero-marquee-item">The Game Development Club of IGDTUW <span class="hero-marquee-dot">✦</span> under the aegis of <span class="accent-m">ACM Student Chapter</span> <span class="hero-marquee-dot">✦</span></div>
-      <div class="hero-marquee-item">The Game Development Club of IGDTUW <span class="hero-marquee-dot">✦</span> under the aegis of <span class="accent-m">ACM Student Chapter</span> <span class="hero-marquee-dot">✦</span></div>
-      <div class="hero-marquee-item">The Game Development Club of IGDTUW <span class="hero-marquee-dot">✦</span> under the aegis of <span class="accent-m">ACM Student Chapter</span> <span class="hero-marquee-dot">✦</span></div>
-    </div>
-  </div>
-</div>
-
-    <div class="scroll-hint"><span>Scroll to explore</span><div class="scroll-hint-line"></div></div>
-  </section>
-
-  <section class="content-section" id="home-overview">
-    <div class="overview-grid">
-      <div>
-        <div class="eyebrow reveal"><div class="rule"></div><span>Tactical Overview</span></div>
-        <h2 class="overview-h reveal">Fostering the next generation of <span class="accent">Developers</span> in gaming.</h2>
-        <p class="overview-p reveal">At NEUTRON, we provide the members with the tools, community, and guidance to transition from players to creators. Our ecosystem is built on technical excellence and creative disruption.</p>
-      </div>
-      <div class="feat-grid reveal">
-        <div class="feat-card glass">
-          <div class="card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="8" width="20" height="10" rx="4"/><circle cx="8" cy="13" r="1.2" fill="currentColor" stroke="none"/><circle cx="6" cy="11" r="1.2" fill="currentColor" stroke="none"/><circle cx="17" cy="12" r="1" fill="currentColor" stroke="none"/><circle cx="19" cy="14" r="1" fill="currentColor" stroke="none"/></svg></div>
-          <h3>Gaming Showdowns</h3>
-          <p>Intense game showdowns for players of all skill levels for those seeking challenge and excitement.</p>
-        </div>
-        <div class="feat-card glass">
-          <div class="card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="13" rx="1.5"/><path d="M8 21h8M12 17v4"/></svg></div>
-          <h3>Workshops</h3>
-          <p>Deep dives into Unity and custom C#, physics engines.</p>
-        </div>
-        <div class="feat-card glass wide">
-          <div class="card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="8" r="3"/><path d="M2 20c0-3.5 3-6 7-6s7 2.5 7 6"/><circle cx="17" cy="8" r="2.4"/><path d="M16 14.2c2.7.4 5 2.3 5 5.8"/></svg></div>
-          <h3>Mentorship</h3>
-          <p>High-intensity development sprints where concepts turn into playable reality.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="content-section">
-    <div class="bro-grid">
-      <div>
-        <h2 class="bro-title reveal">Event Brochures</h2>
-        <p class="bro-desc reveal">A glimpse into the games, events, and unforgettable moments that brought our community together.</p>
-      </div>
-      <div class="bro-list reveal">
-
-    <div class="bro-row glass">
-        <span>Brochure 25–26</span>
-
-        <a href="brochures/brochure25-26.pdf"
-           class="link-btn"
-           target="_blank">
-           View PDF
-        </a>
-    </div>
-
-    <div class="bro-row glass">
-        <span>Brochure 24–25</span>
-
-        <a href="brochures/brochure24-25.pdf"
-           class="link-btn"
-           target="_blank">
-           View PDF
-        </a>
-    </div>
-
-</div>
-    </div>
-  </section>
-
-  <section class="content-section">
-    <div class="contact-grid">
-      <div>
-        <div class="eyebrow reveal"><div class="rule"></div><span>Communication Bridge</span></div>
-        <h2 class="contact-h reveal">Initiate <span class="accent">Contact</span></h2>
-        <p class="contact-desc reveal">Ready to join the fleet or collaborate on a galactic project? Send a transmission or visit our base of operations.</p>
-        <div class="reveal">
-          <div class="contact-2x2">
-            <div class="contact-row glass-strong"><div class="c-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 6l10 7L22 6"/></svg></div><div><div class="c-label">Email Transmission</div><div class="c-val"><a href="mailto:neutron@igdtuw.ac.in">neutron@igdtuw.ac.in</a></div></div></div>
-            <div class="contact-row glass-strong"><div class="c-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></div><div><div class="c-label">Instagram Frequency</div><div class="c-val"><a href="https://instagram.com/neutron_igdtuw" target="_blank" rel="noopener">@neutron_igdtuw</a></div></div></div>
-            <div class="contact-row glass-strong"><div class="c-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="4"/><path d="M7 10v7M7 7v.01M12 17v-4c0-1.1.9-2 2-2s2 .9 2 2v4M12 10v7"/></svg></div><div><div class="c-label">LinkedIn Frequency</div><div class="c-val"><a href="https://linkedin.com/company/neutron-igdtuw" target="_blank" rel="noopener">Neutron IGDTUW</a></div></div></div>
-            <div class="contact-row glass-strong"><div class="c-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.4"/></svg></div><div><div class="c-label">Coordinates</div><div class="c-val">IGDTUW, Kashmere Gate, Delhi</div></div></div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <footer><div class="foot-brand">NEUTRON</div><div class="foot-r"><div class="foot-meta">&#169; 2024 Neutron IGDTUW. Transmission ends.</div></div></footer>
-</div>
-<div class="view" id="view-team-2526">
-<div class="orbit-wrap">
-  <div class="orbit-topbar">
-    <button class="back-btn" onclick="showView('view-team')">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
-      Back to Team
-    </button>
-  </div>
-  <div class="orbit-title">
-    <span>ORBIT 25-26</span>
-  </div>
-
-<div class="tg-label">
-    <span>LEADERSHIP</span>
-</div>
-
-<div class="tg-row leadership-row">
-
-    <div class="tm" id="t2526-pragya">
-        <div class="avatar avatar-large">
-            <img src="pictures/25-26/pragya.jpeg" alt="Pragya">
-        </div>
-        <div class="mname">PRAGYA</div>
-        <div class="mrole">PRESIDENT</div>
-    </div>
-
-    <div class="tm" id="t2526-kavya">
-        <div class="avatar avatar-large">
-            <img src="pictures/25-26/kavya.jpeg" alt="Kavya">
-        </div>
-        <div class="mname">KAVYA CHAUDARI</div>
-        <div class="mrole">VICE PRESIDENT</div>
-    </div>
-
-    <div class="tm" id="t2526-mansi">
-        <div class="avatar avatar-large">
-            <img src="pictures/25-26/mansi.jpeg" alt="Mansi">
-        </div>
-        <div class="mname">MANSI SOLANKI</div>
-        <div class="mrole">TREASURER</div>
-    </div>
-
-</div>
-
-<div class="tg-row dual-groups">
-
-    <!-- OUTREACH -->
-    <div class="team-group">
-
-        <div class="group-members">
-
-            <div class="tm" id="t2526-mitali">
-                <div class="avatar">
-                    <img src="pictures/25-26/mitali.jpeg" alt="Mitali">
-                </div>
-                <div class="mname">MITALI</div>
-            </div>
-
-            <div class="tm" id="t2526-anushka">
-                <div class="avatar">
-                    <img src="pictures/25-26/anushka.jpeg" alt="Anushka">
-                </div>
-                <div class="mname">ANUSHKA</div>
-            </div>
-        </div>
-<div class="tg-label">
-            <span>OUTREACH CORES</span>
-        </div>
-    </div>
-
-    <!-- MEDIA -->
-    <div class="team-group">
-
-        <div class="group-members">
-
-            <div class="tm" id="t2526-harshita">
-                <div class="avatar">
-                    <img src="pictures/25-26/harshita.jpeg" alt="Harshita">
-                </div>
-                <div class="mname">HARSHITA</div>
-            </div>
-
-            <div class="tm" id="t2526-lakshita">
-                <div class="avatar">
-                    <img src="pictures/25-26/lakshita.jpeg" alt="Lakshita">
-                </div>
-                <div class="mname">LAKSHITA</div>
-            </div>
-
-        </div>
-        <div class="tg-label">
-            <span>MEDIA &amp; CREATIVE CORES</span>
-        </div>
-    </div>
-
-</div>
-
-<div class="tg-row five-members">
-
-    <div class="tm">
-        <div class="avatar"><img src="pictures/25-26/mahak.jpeg" alt="Mahak"></div>
-        <div class="mname">MAHAK</div>
-    </div>
-
-    <div class="tm">
-        <div class="avatar"><img src="pictures/25-26/vanisha.jpeg" alt="Vanisha"></div>
-        <div class="mname">VANISHA</div>
-    </div>
-
-    <div class="tm">
-        <div class="avatar"><img src="pictures/25-26/priyanshi.jpeg" alt="Priyanshi"></div>
-        <div class="mname">PRIYANSHI</div>
-    </div>
-
-    <div class="tm">
-        <div class="avatar"><img src="pictures/25-26/aanya.jpeg" alt="Aanya"></div>
-        <div class="mname">AANYA</div>
-    </div>
-
-    <div class="tm">
-        <div class="avatar"><img src="pictures/25-26/nikita.jpeg" alt="Nikita"></div>
-        <div class="mname">NIKITA</div>
-    </div>
-
-</div>
-
-<div class="five-labels">
-
-    <div>GAME DEV CORES</div>
-
-    <div>GAME DEV MENTOR</div>
-
-    <div>EVENT MANAGEMENT CORES</div>
-
-</div>
-
-  <!-- MEMORY LANE 25-26 -->
-  <div class="orbit-memory-title">
-    <h2>MEMORY LANE</h2>
-</div>
-    <div class="memory-grid">
-    <!-- ML1 -->
-    <div class="memory-big"><img src="memorylane/2526/ML1.png" alt="ML1"></div>
-    <!-- ML2 + ML3 -->
-    <div class="memory-row">
-        <div class="memory-half"><img src="memorylane/2526/ML2.png" alt="ML2"></div>
-        <div class="memory-half"><img src="memorylane/2526/ML3.png" alt="ML3"></div>
-      </div>
-    <!-- ML4 -->
-    <div class="memory-big"><img src="memorylane/2526/ML4.png" alt="ML4"></div>
-  <!-- ML5 + ML6 -->
-<div class="memory-row">
-    <div class="memory-half"><img src="memorylane/2526/ML5.png" alt="ML5"></div>
-    <div class="memory-half"><img src="memorylane/2526/ML6.png" alt="ML6"></div>
-    </div>
-  <!-- ML7 + ML8 -->
-<div class="memory-row">
-    <div class="memory-half"><img src="memorylane/2526/ML7.png" alt="ML7"></div>
-    <div class="memory-half"><img src="memorylane/2526/ML8.png" alt="ML8"></div>
-  </div>
-  </div>
-</div>
-</div>
+<div class="view" id="view-home"></div>
+<div class="view" id="view-team-2526"></div>
 </div>
 
 </div><!-- /orbit-wrap -->
 </div>
 
 <!-- ====== EVENTS LANDING ====== -->
-<div class="view" id="view-events">
-  <div class="landing-hero"><div class="planet planet-events"></div><h1 class="lh-word">OUR EVENTS</h1></div>
-  <div class="cards-sec">
-    <div class="card-list">
-      <div class="e-card glass-strong" onclick="showView('view-events-2526')">
-        <h3>Events 25-26</h3>
-        <p>Mission Log: 2025&#8211;2026. A record of the events, competitions, and achievements that propelled Neutron toward new frontiers of creativity and game development.</p>
-        <div class="e-foot"><div class="e-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7dd8e8" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg></div><div><div class="e-lbl">Neutron's Event</div><div class="e-sub">System Online</div></div></div>
-      </div>
-      <div class="e-card glass-strong" onclick="showView('view-events-2425')">
-        <h3>Events 24-25</h3>
-        <p>Mission Log: 2024&#8211;2025. The first transmission in Neutron's story, capturing the events and milestones that ignited a community of creators and game developers.</p>
-        <div class="e-foot"><div class="e-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7dd8e8" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg></div><div><div class="e-lbl">Neutron's Event</div><div class="e-sub">System Online</div></div></div>
-      </div>
-    </div>
-  </div>
-  <footer><div class="foot-brand">NEUTRON</div><div class="foot-r"><div class="foot-meta">&#169; 2024 Neutron IGDTUW.</div></div></footer>
-</div>
+<div class="view" id="view-events"></div>
 
 <!-- ====== EVENTS 25-26 ====== -->
-<div class="view" id="view-events-2526">
-  <div class="view-hdr">
-    <button class="back-btn" onclick="showView('view-events')"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg> Back to Events</button>
-    <div class="eyebrow"><div class="rule"></div><span>Orbital Schedule</span></div>
-    <h1>Events <span class="accent">25-26</span></h1>
-  </div>
-  <div class="tl-wrap">
-    <div class="tl-spine"></div>
-    <div class="tl-row left"><div class="tl-dot"></div><div class="tc glass"><div class="tc-top"><span class="log-tag">Logs: 01</span><div class="ti"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 17L13 3L11 11L21 7L11 21L13 13L3 17Z"/></svg></div></div><h3>Orientation 25-26</h3><p>The year's first launch sequence brought students aboard Neutron, exploring its mission, crew, and possibilities in game development.</p></div><div class="td">12 November, 2025</div></div>
-    <div class="tl-row right"><div class="tl-dot"></div><div class="td">25 January, 2026</div><div class="tc glass"><div class="tc-top"><span class="log-tag">Logs: 02</span><div class="ti"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></div></div><h3>Anti-Chess Tournament</h3><div class="tmeta">Online Protocol</div><p>In this tournament, the goal was to lose all pieces to dominate the leaderboard. Pure inverse strategy and a mind-bending challenge of tactical self-destruction.</p></div></div>
-    <div class="tl-row left"><div class="tl-dot"></div><div class="tc glass"><div class="tc-top"><span class="log-tag">Logs: 03</span><div class="ti"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="8" width="20" height="10" rx="4"/><circle cx="8" cy="13" r="1" fill="currentColor"/><circle cx="6" cy="11" r="1" fill="currentColor"/></svg></div></div><h3>GameFusion Cup</h3><div class="tmeta">In Collaboration with Innerve</div><p>A multi-game tournament where teams of 2 compete across Anti-chess, Smash Karts along with a Subway Surfers bonus round.</p></div><div class="td">17 March, 2026</div></div>
-    <div class="tl-row right"><div class="tl-dot"></div><div class="td">4 April, 2026</div><div class="tc glass"><div class="tc-top"><span class="log-tag">Logs: 04</span><div class="ti"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 17V7l8-4 8 4v10l-8 4-8-4z"/><path d="M4 7l8 4 8-4M12 11v10"/></svg></div></div><h3>Unity Game Dev Workshop</h3><div class="tmeta">With Apogee (BITS Pilani)</div><p>A hands-on Unity 6 workshop where members built two complete 3D projects while learning systems-driven game development.</p></div></div>
-    <div class="tl-row left"><div class="tl-dot"></div><div class="tc glass"><div class="tc-top"><span class="log-tag">Logs: 05</span><div class="ti"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="9"/></svg></div></div><h3>NEUTRON ORIGINALS: Game Arena</h3><p>A game showcase where the Development team presented their original game projects, competing for best pitch and best overall.</p></div><div class="td">27 April, 2026</div></div>
-    <div class="tl-row right"><div class="tl-dot"></div><div class="td">27 April, 2026</div><div class="tc glass"><div class="tc-top"><span class="log-tag">Logs: 06</span><div class="ti"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 21h8M12 3v12M8 8a4 4 0 008 0"/></svg></div></div><h3>Felicitation 25-26</h3><p>A felicitation ceremony celebrating Neutron's finest, honoring the best members with medals in recognition of their contributions and achievements.</p></div></div>
-  </div>
-</div>
+<div class="view" id="view-events-2526"></div>
 
 <!-- ====== EVENTS 24-25 ====== -->
-<div class="view" id="view-events-2425">
-  <div class="view-hdr">
-    <button class="back-btn" onclick="showView('view-events')"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg> Back to Events</button>
-    <div class="eyebrow"><div class="rule"></div><span>Orbital Schedule</span></div>
-    <h1>Events <span class="accent">24-25</span></h1>
-  </div>
-  <div class="tl-wrap">
-    <div class="tl-spine"></div>
-    <div class="tl-row left"><div class="tl-dot"></div><div class="tc glass"><div class="tc-top"><span class="log-tag">Logs: 01</span><div class="ti"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 17L13 3L11 11L21 7L11 21L13 13L3 17Z"/></svg></div></div><h3>Orientation 24-25</h3><p>First launch. Full crew. Neutron opened the year by walking students through everything: the mission, the people, the upcoming events, and the game development journey ahead.</p></div><div class="td">September, 2025</div></div>
-    <div class="tl-row right"><div class="tl-dot"></div><div class="td">22 April, 2026</div><div class="tc glass"><div class="tc-top"><span class="log-tag">Logs: 02</span><div class="ti"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="9"/></svg></div></div><h3>NEUTRON ORIGINALS: Game Arena</h3><p>A game showcase where the Development team presented their original projects and medals were awarded to the best pitch and best overall game.</p></div></div>
-    <div class="tl-row left"><div class="tl-dot"></div><div class="tc glass"><div class="tc-top"><span class="log-tag">Logs: 03</span><div class="ti"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 21h8M12 3v12M8 8a4 4 0 008 0"/></svg></div></div><h3>Felicitation 24-25</h3><p>A celebration of Neutron's finest &#8212; honoring standout members from every team and the core team with medals, recognizing their hard work and dedication throughout the tenure.</p></div><div class="td">22 April, 2026</div></div>
-  </div>
-</div>
+<div class="view" id="view-events-2425"></div>
 
 <!-- ====== GAMES LANDING ====== -->
-<div class="view" id="view-games">
-  <div class="landing-hero"><div class="planet planet-games"></div><h1 class="lh-word">OUR GAMES</h1></div>
-  <div class="cards-sec">
-    <div class="card-list">
-      <div class="e-card glass-strong" onclick="showView('view-games-2526')"><h3>Our Games 25-26</h3><p>Dive into the games developed by Neutron's 2025-26 batch where each project is a reflection of the team's growth, creativity, and passion for building gaming experiences from the ground up.</p><div class="e-foot"><div class="e-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7dd8e8" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg></div><div><div class="e-lbl">Neutron's Game</div><div class="e-sub">System Online</div></div></div></div>
-      <div class="e-card glass-strong" onclick="showView('view-games-2425')"><h3>Our Games 24-25</h3><p>Step back into the work that started it all, showcasing the games built by Neutron's 2024-25 team, laying the groundwork for the club's vision and everything that came after.</p><div class="e-foot"><div class="e-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7dd8e8" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg></div><div><div class="e-lbl">Neutron's Game</div><div class="e-sub">System Online</div></div></div></div>
-    </div>
-  </div>
-  <footer><div class="foot-brand">NEUTRON</div><div class="foot-r"><div class="foot-meta">&#169; 2024 Neutron IGDTUW.</div></div></footer>
-</div>
+<div class="view" id="view-games"></div>
 
 <!-- ====== GAMES 25-26 ====== -->
-<div class="view" id="view-games-2526">
-  <div class="assets-v">
-    <button class="back-btn" onclick="showView('view-games')"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg> Back to Our Games</button>
-    <h1 class="assets-h">DEPLOYED ASSETS</h1>
-    <div class="cycle-hdr"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 8v4l3 3M12 3a9 9 0 100 18 9 9 0 000-18z"/></svg><h2>Cycle 25-26</h2><div class="crule"></div></div>
-    <div class="game-list">
-      <div class="gc glass"><h3>Velmora: The Fallen Kingdom</h3><p>A three-stage action game set in a corrupted realm on the brink of collapse. A nameless warrior awakens with one purpose and that is to fight through the darkness that consumed Velmora and seal the Gate of Ruin before nothing is left to save.</p><p>Each island presents a distinct challenge: survive relentless zombie waves in Corpse Hollow, protect the villagers of DragonBane from a vicious dragon, and face the Demon King himself. Three islands. Three battles. One chance.</p><div class="credits"><strong>Developed by:</strong> Shraddha Pant (ECE-AI), Neha (CSE-AI), Samriddhi (ECE-AI), Zainab Hussain (MAE)</div><a href="https://codenchibbi.itch.io/velmora" target="_blank" rel="noopener noreferrer" class="lnk">Link</a></div>
-      <div class="gc glass"><h3>Serpent's Second Chance</h3><p>A reimagined Snake and Ladder in the Kingdom of Ascension. Landing on a serpent triggers a mini-game challenge &#8212; Guess the Card, Hangman, or Avoid Falling Objects. Prove your skill and continue unharmed. Fail, and you slide back.</p><p>Climb the ladders, outsmart the serpents, and fight your way to Tile 100.</p><div class="credits"><strong>Developed by:</strong> Ojaswi (CSE), Palak Jain (CSE), Vatika (CSE-AI), Drishti (CSE)</div><a href="#" class="lnk">Link</a></div>
-      <div class="gc glass"><h3>Zero Hour: Escape</h3><p>A psychological escape room where you play as Subject 027, placed inside a controlled cognitive experiment disguised as a cozy, ordinary room. Locked doors, a ticking clock, and intentionally placed objects slowly reveal the truth.</p><p>Navigate slider puzzles, safes, chess logic, card patterns and locks. Escape, and you're fit for deployment. Fail, and the trial concludes without you.</p><div class="credits"><strong>Developed by:</strong> Zainab Tanweer (ECE), Priyanshi Jaiswal (MAC), Astha Singh (MAE), Dishita Gupta (CSE)</div><a href="#" class="lnk">Link</a></div>
-    </div>
-  </div>
-</div>
+<div class="view" id="view-games-2526"></div>
 
 <!-- ====== GAMES 24-25 ====== -->
-<div class="view" id="view-games-2425">
-  <div class="assets-v">
-    <button class="back-btn" onclick="showView('view-games')"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg> Back to Our Games</button>
-    <h1 class="assets-h">DEPLOYED ASSETS</h1>
-    <div class="cycle-hdr"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 8v4l3 3M12 3a9 9 0 100 18 9 9 0 000-18z"/></svg><h2>Cycle 24-25</h2><div class="crule"></div></div>
-    <div class="game-list">
-      <div class="gc glass"><h3>Astro Drifting</h3><p>A space racing game where you pilot a rocket through a cosmic obstacle course, collecting golden coins, grabbing fuel relics to stay alive, and dodging Time-Turtles that slow you down. Set in the lore of the lost Ancients of Orbiton.</p><p>Survive the void, outlast the chaos, and drift your way into legend.</p><div class="credits"><strong>Developed by:</strong> Kavya Chaudhari (CSE), Palak Bhatia (AIML), Lavanaya Khosla (CSE), Aksa (CSE), Anisha Gupta (CSE-AI), Navya Gupta (ECE), Priya Kumari (CSE), Priyanshi (ECE-AI), Trisha Tomy (IT), Yashika Ashra (MAE)</div><a href="#" class="lnk">Link</a></div>
-      <div class="gc glass"><h3>Pentara</h3><p>A combat game rooted in betrayal, legacy, and the fight to keep a forbidden power buried. Five warriors trained under the same master, each carrying a fragment of the legendary Hidden Scroll. Two turn against the pact &#8212; the remaining three must fight back.</p><p>Face off against Samurai opponents where every battle carries the weight of a centuries-old secret.</p><div class="credits"><strong>Developed by:</strong> Mahak (CSE-AI), Khushi (ECE-AI), Vanisha (CSE), Kritika (CSE), Kirti (CSE), Ekamjot (CSE)</div><a href="#" class="lnk">Link</a></div>
-      <div class="gc glass"><h3>Blingo</h3><p>A digital reimagining of classic Bingo as a 6x8 Player vs AI battle. Match the called numbers, complete a row, and win before the AI does. No strategy, no skill gap &#8212; just you, a bot that takes Bingo very seriously, and the pure chaos of chance.</p><div class="credits"><strong>Developed by:</strong> Vansika Rana (CSE), Jyoti Choudhary (CSE-AI)</div><a href="#" class="lnk">Link</a></div>
-      <div class="gc glass"><h3>Fred in the Fright House</h3><p>A 3D horror-puzzle adventure where you guide Fred (a self-declared coward) through a haunted mansion. Dared by his friends, Fred steps inside and immediately regrets everything. Team up with a friendly spirit to find 3 hidden keys while dodging every ghost.</p><p>Sneak through creepy hallways, crack candle puzzles, color codes, and symbol locks. Scary? Yes. Fun? Absolutely.</p><div class="credits"><strong>Developed by:</strong> Akanksha Bathla (CSE), Harshita Agarwal (CSE-AI), Prachi Kumari (CSE-AI), Swarnima (CSE), Vanshika (CSE-AI), Vedika (CSE-AI)</div><a href="#" class="lnk">Link</a></div>
-    </div>
-  </div>
-</div>
+<div class="view" id="view-games-2425"></div>
 
 <!-- ====== TEAM ====== -->
-<div class="view" id="view-team">
-
-<div class="landing-hero">
-    <div class="planet planet-teams"></div>
-    <h1 class="lh-word">MEET THE TEAM</h1>
-</div>
-
-<div class="team-sec">
-
-    <!-- ================= FACULTY ================= -->
-    <div class="faculty-row">
-    <div class="tm">
-        <div class="avatar shweta"></div>
-        <div class="mname">DR. SHWETA JINDAL</div>
-    </div>
-
-    <div class="section-label">FACULTY COORDINATORS</div>
-
-    <div class="tm">
-        <div class="avatar rishabh"></div>
-        <div class="mname">DR. RISHABH KAUSHAL</div>
-    </div>
-</div>
-
-<div class="faculty-row founder-row">
-    <div class="tm">
-        <div class="avatar pari"></div>
-        <div class="mname">PARI KHAITAN</div>
-    </div>
-
-    <div class="section-label">FOUNDERS</div>
-
-    <div class="tm">
-        <div class="avatar saumya"></div>
-        <div class="mname">SAUMYA BHARTI</div>
-    </div>
-</div>
-
-    <!-- ORBIT 25-26 STARTS BELOW -->
-<div class="card-list">
-
-    <div class="e-card glass-strong" onclick="showView('view-team-2526')">
-        <h3>Team 25-26</h3>
-        <p>A tribute to the faces behind the work, meet the core team that kept Neutron running through 2025-26.</p>
-
-        <div class="e-foot">
-            <div class="e-icon">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7dd8e8" stroke-width="1.8">
-                    <circle cx="12" cy="12" r="9"/>
-                    <circle cx="12" cy="12" r="3"/>
-                </svg>
-            </div>
-
-            <div>
-                <div class="e-lbl">Neutron Team</div>
-                <div class="e-sub">System Online</div>
-            </div>
-        </div>
-    </div>
-
-</section>
-      <div class="e-card glass-strong" onclick="showView('view-team-2425')"><h3>Team 24-25</h3><p>A look back at the team that laid the foundation, the core members who drove Neutron through 2024-25.</p><div class="e-foot"><div class="e-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7dd8e8" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg></div><div><div class="e-lbl">Neutron Team</div><div class="e-sub">System Online</div></div></div></div>
-    </div>
-  </div>
-  <footer><div class="foot-brand">NEUTRON</div><div class="foot-r"><div class="foot-meta">&#169; 2024 Neutron IGDTUW.</div></div></footer>
-</div>
+<div class="view" id="view-team"></div>
 
 </div>
-<div class="view" id="view-team-2425">
-<div class="orbit-wrap">
-  <div class="orbit-topbar">
-    <button class="back-btn" onclick="showView('view-team')">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
-      Back to Team
-    </button>
-  </div>
-
-  <div class="orbit-title">
-    <span>ORBIT 24-25</span>
-</div>
-
-<div class="tg-label"><span>LEADERSHIP</span></div>
-<div class="tg-row leadership-row">
-
-    <div class="tm" id="t2425-prachi">
-        <div class="avatar avatar-large">
-            <img src="pictures/24-25/prachi.png" alt="Prachi">
-        </div>
-        <div class="mname">PRACHI VERMA</div>
-        <div class="mrole">PRESIDENT</div>
-    </div>
-
-    <div class="tm" id="t2425-sania">
-        <div class="avatar avatar-large">
-            <img src="pictures/24-25/sania.png" alt="Sania">
-        </div>
-        <div class="mname">SANIA SAINI</div>
-        <div class="mrole">TREASURER</div>
-    </div>
-    <div class="tm" id="t2425-shristy">
-        <div class="avatar avatar-large">
-            <img src="pictures/24-25/shristy.png" alt="Shristy">
-        </div>
-        <div class="mname">SHRISTY RANJAN</div>
-        <div class="mrole">PRESIDENT</div>
-    </div>
-</div>
-
-<!-- ROW 1 -->
-<div class="tg-row">
-
-    <!-- OUTREACH -->
-    <div class="team-group">
-        <div class="tg-members">
-            <div class="tm" id="t2425-hafsa">
-                <div class="avatar">
-                    <img src="pictures/24-25/hafsa.png" alt="Hafsa">
-                </div>
-                <div class="mname">HAFSA MASOOD</div>
-            </div>
-
-            <div class="tm" id="t2425-anoma">
-                <div class="avatar">
-                    <img src="pictures/24-25/anoma.png" alt="Anoma">
-                </div>
-                <div class="mname">ANOMA SINGH</div>
-            </div>
-        </div>
-
-        <div class="tg-label"><span>OUTREACH CORES</span></div>
-    </div>
-
-    <!-- MEDIA -->
-    <div class="team-group">
-        <div class="tg-members">
-            <div class="tm" id="t2425-akanya">
-                <div class="avatar">
-                    <img src="pictures/24-25/ananya.png" alt="Ananya">
-                </div>
-                <div class="mname">ANANYA</div>
-            </div>
-
-            <div class="tm" id="t2425-bhumika">
-                <div class="avatar">
-                    <img src="pictures/24-25/bhumika.png" alt="Bhumika">
-                </div>
-                <div class="mname">BHUMIKA</div>
-            </div>
-        </div>
-
-        <div class="tg-label"><span>MEDIA &amp; CREATIVE CORES</span></div>
-    </div>
-
-</div>
-
-
-<!-- ROW 2 -->
-<div class="tg-row">
-
-    <!-- GAME DEVELOPMENT -->
-    <div class="team-group">
-        <div class="tg-members">
-            <div class="tm" id="t2425-tanya-s">
-                <div class="avatar">
-                    <img src="pictures/24-25/tanyasharma.png" alt="Tanya Sharma">
-                </div>
-                <div class="mname">TANYA SHARMA</div>
-            </div>
-
-            <div class="tm" id="t2425-tanya-a">
-                <div class="avatar">
-                    <img src="pictures/24-25/tanyaagg.png" alt="Tanya Aggarwal">
-                </div>
-                <div class="mname">TANYA AGGARWAL</div>
-            </div>
-        </div>
-
-        <div class="tg-label"><span>GAME DEVELOPMENT CORES</span></div>
-    </div>
-
-    <!-- CONTENT -->
-    <div class="team-group">
-        <div class="tg-members">
-            <div class="tm" id="t2425-aayushi">
-                <div class="avatar">
-                    <img src="pictures/24-25/aayushi.png" alt="Aayushi">
-                </div>
-                <div class="mname">AAYUSHI</div>
-            </div>
-        </div>
-
-        <div class="tg-label"><span>CONTENT CORE</span></div>
-    </div>
-
-    <!-- EVENT MANAGEMENT -->
-    <div class="team-group">
-        <div class="tg-members">
-            <div class="tm" id="t2425-aditi">
-                <div class="avatar">
-                    <img src="pictures/24-25/aditi.png" alt="Aditi">
-                </div>
-                <div class="mname">ADITI</div>
-            </div>
-
-            <div class="tm" id="t2425-shambhavi">
-                <div class="avatar">
-                    <img src="pictures/24-25/shambhavi.png" alt="Shambhavi">
-                </div>
-                <div class="mname">SHAMBHAVI</div>
-            </div>
-        </div>
-
-        <div class="tg-label"><span>EVENT MANAGEMENT CORES</span></div>
-    </div>
-
-</div>
-
-<!-- MEMORY LANE 24-25 -->
-<div class="memory-lane-2425">
-
-    <div class="memory-title-wrap-2425">
-        <div class="memory-title-2425">
-            MEMORY LANE
-        </div>
-    </div>
-
-    <div class="memory-grid-2425">
-        <!-- ML1 -->
-        <div class="memory-big-2425">
-            <img src="memorylane/2425/ML25-1.png" alt="">
-        </div>
-        <!-- ML2 + ML3 -->
-        <div class="memory-row-2425">
-            <div class="memory-half-2425">
-                <img src="memorylane/2425/ML25-2.png" alt="">
-            </div>
-
-            <div class="memory-half-2425">
-                <img src="memorylane/2425/ML25-3.png" alt="">
-            </div>
-        </div>
-        <!-- ML4 -->
-        <div class="memory-big-2425">
-            <img src="memorylane/2425/ML25-4.png" alt="">
-        </div>
-        <!-- ML5 + ML6 -->
-        <div class="memory-row-2425">
-            <div class="memory-half-2425">
-                <img src="memorylane/2425/ML25-5.png" alt="">
-            </div>
-            <div class="memory-half-2425">
-                <img src="memorylane/2425/ML25-6.png" alt="">
-            </div>
-        </div>
-    </div>
-</div>
-
-</div><!-- /orbit-wrap -->
-</div>
+<div class="view" id="view-team-2425"></div>
 <script>
-// CSS STARFIELD
-(function(){
+// CSS STARFIELD (called once #css-stars exists — home.html is fetched lazily now)
+function generateCssStars(){
   var l=document.getElementById('css-stars');
   if(!l)return;
+  if(l.dataset.filled)return;
+  l.dataset.filled='1';
   var f=document.createDocumentFragment();
   for(var i=0;i<35;i++){
     var s=document.createElement('span');
@@ -1741,21 +1145,39 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
     f.appendChild(s);
   }
   l.appendChild(f);
-})();
+}
 
-// VIEW SWITCHING
+// VIEW SWITCHING (lazy-loads each section's HTML from /sections on first visit)
 var navLinks=Array.prototype.slice.call(document.querySelectorAll('.nav-links a[data-view]'));
 var subP={'view-events-2526':'view-events','view-events-2425':'view-events','view-games-2526':'view-games','view-games-2425':'view-games','view-team-2526':'view-team','view-team-2425':'view-team'};
+var sectionMap={'view-home':'sections/home.html','view-events':'sections/events.html','view-events-2526':'sections/events-2526.html','view-events-2425':'sections/events-2425.html','view-games':'sections/games.html','view-games-2526':'sections/games-2526.html','view-games-2425':'sections/games-2425.html','view-team':'sections/team.html','view-team-2526':'sections/team-2526.html','view-team-2425':'sections/team-2425.html'};
+var loadedViews={};
 
-function showView(id){
-  Array.prototype.forEach.call(document.querySelectorAll('.view'),function(v){v.classList.remove('active');});
-  var t=document.getElementById(id);if(t)t.classList.add('active');
-  var m=subP[id]||id;
-  navLinks.forEach(function(l){l.classList.toggle('active',l.getAttribute('data-view')===m);});
-  window.scrollTo({top:0,behavior:'instant'});
+function revealView(id){
   setTimeout(function(){
     Array.prototype.forEach.call(document.querySelectorAll('#'+id+' .reveal'),function(el){el.classList.remove('visible');void el.offsetWidth;el.classList.add('visible');});
   },60);
+}
+
+function showView(id){
+  Array.prototype.forEach.call(document.querySelectorAll('.view'),function(v){v.classList.remove('active');});
+  var t=document.getElementById(id);
+  if(t){
+    t.classList.add('active');
+    if(loadedViews[id]){
+      revealView(id);
+    }else if(sectionMap[id]){
+      fetch(sectionMap[id]).then(function(r){return r.text();}).then(function(txt){
+        t.innerHTML=txt;
+        loadedViews[id]=true;
+        if(id==='view-home')generateCssStars();
+        revealView(id);
+      }).catch(function(err){console.error('Failed to load section:',id,err);});
+    }
+  }
+  var m=subP[id]||id;
+  navLinks.forEach(function(l){l.classList.toggle('active',l.getAttribute('data-view')===m);});
+  window.scrollTo({top:0,behavior:'instant'});
   if(window._setScene)window._setScene(id);
 }
 navLinks.forEach(function(l){l.addEventListener('click',function(e){e.preventDefault();showView(l.getAttribute('data-view'));document.querySelector('.nav-links').classList.remove('open');});});

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEUTRON — Game Development Club, IGDTUW</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Lexend+Deca:wght@400;500;600;700&family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<canvas id="universe-canvas"></canvas>
+
+<nav>
+  <div class="nav-brand" onclick="showView('view-home')">
+    <img src="pictures/logo.png" class="nav-logo" alt="Neutron Logo">
+    NEUTRON
+  </div>
+
+  <div class="nav-links">
+    <a href="index.html" class="active">Home</a>
+    <a href="pages/events.html">Events</a>
+    <a href="pages/games.html">Our Games</a>
+    <a href="pages/team.html">Team</a>
+  </div>
+  <button class="nav-burger" onclick="toggleNav()" aria-label="Menu">
+    <span></span><span></span><span></span>
+</button>
+</nav>
+
+<!-- ====== HOME ====== -->
+<div class="view" id="view-home">
+  <section class="hero-section">
+    <div class="orb orb1"></div><div class="orb orb2"></div><div class="orb orb3"></div>
+    <div class="star-layer" id="css-stars"></div>
+    <div class="hero-sphere">
+      <div class="atmosphere"></div>
+      <div class="sphere-base"></div>
+      <div class="sphere-glow"></div>
+</div>
+    <div class="wordmark-wrap">
+      <span class="wordmark" data-text="NEUTRON">NEUTRON</span>
+    </div>
+    <div class="hero-marquee">
+  <div class="hero-marquee-track">
+    <div class="hero-marquee-group">
+      <div class="hero-marquee-item">The Game Development Club of IGDTUW <span class="hero-marquee-dot">✦</span> under the aegis of <span class="accent-m">ACM Student Chapter</span> <span class="hero-marquee-dot">✦</span></div>
+      <div class="hero-marquee-item">The Game Development Club of IGDTUW <span class="hero-marquee-dot">✦</span> under the aegis of <span class="accent-m">ACM Student Chapter</span> <span class="hero-marquee-dot">✦</span></div>
+      <div class="hero-marquee-item">The Game Development Club of IGDTUW <span class="hero-marquee-dot">✦</span> under the aegis of <span class="accent-m">ACM Student Chapter</span> <span class="hero-marquee-dot">✦</span></div>
+      <div class="hero-marquee-item">The Game Development Club of IGDTUW <span class="hero-marquee-dot">✦</span> under the aegis of <span class="accent-m">ACM Student Chapter</span> <span class="hero-marquee-dot">✦</span></div>
+    </div>
+    <div class="hero-marquee-group" aria-hidden="true">
+      <div class="hero-marquee-item">The Game Development Club of IGDTUW <span class="hero-marquee-dot">✦</span> under the aegis of <span class="accent-m">ACM Student Chapter</span> <span class="hero-marquee-dot">✦</span></div>
+      <div class="hero-marquee-item">The Game Development Club of IGDTUW <span class="hero-marquee-dot">✦</span> under the aegis of <span class="accent-m">ACM Student Chapter</span> <span class="hero-marquee-dot">✦</span></div>
+      <div class="hero-marquee-item">The Game Development Club of IGDTUW <span class="hero-marquee-dot">✦</span> under the aegis of <span class="accent-m">ACM Student Chapter</span> <span class="hero-marquee-dot">✦</span></div>
+      <div class="hero-marquee-item">The Game Development Club of IGDTUW <span class="hero-marquee-dot">✦</span> under the aegis of <span class="accent-m">ACM Student Chapter</span> <span class="hero-marquee-dot">✦</span></div>
+    </div>
+  </div>
+</div>
+
+    <div class="scroll-hint"><span>Scroll to explore</span><div class="scroll-hint-line"></div></div>
+  </section>
+
+  <section class="content-section" id="home-overview">
+    <div class="overview-grid">
+      <div>
+        <div class="eyebrow reveal"><div class="rule"></div><span>Tactical Overview</span></div>
+        <h2 class="overview-h reveal">Fostering the next generation of <span class="accent">Developers</span> in gaming.</h2>
+        <p class="overview-p reveal">At NEUTRON, we provide the members with the tools, community, and guidance to transition from players to creators. Our ecosystem is built on technical excellence and creative disruption.</p>
+      </div>
+      <div class="feat-grid reveal">
+        <div class="feat-card glass">
+          <div class="card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="8" width="20" height="10" rx="4"/><circle cx="8" cy="13" r="1.2" fill="currentColor" stroke="none"/><circle cx="6" cy="11" r="1.2" fill="currentColor" stroke="none"/><circle cx="17" cy="12" r="1" fill="currentColor" stroke="none"/><circle cx="19" cy="14" r="1" fill="currentColor" stroke="none"/></svg></div>
+          <h3>Gaming Showdowns</h3>
+          <p>Intense game showdowns for players of all skill levels for those seeking challenge and excitement.</p>
+        </div>
+        <div class="feat-card glass">
+          <div class="card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="13" rx="1.5"/><path d="M8 21h8M12 17v4"/></svg></div>
+          <h3>Workshops</h3>
+          <p>Deep dives into Unity and custom C#, physics engines.</p>
+        </div>
+        <div class="feat-card glass wide">
+          <div class="card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="8" r="3"/><path d="M2 20c0-3.5 3-6 7-6s7 2.5 7 6"/><circle cx="17" cy="8" r="2.4"/><path d="M16 14.2c2.7.4 5 2.3 5 5.8"/></svg></div>
+          <h3>Mentorship</h3>
+          <p>High-intensity development sprints where concepts turn into playable reality.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="bro-grid">
+      <div>
+        <h2 class="bro-title reveal">Event Brochures</h2>
+        <p class="bro-desc reveal">A glimpse into the games, events, and unforgettable moments that brought our community together.</p>
+      </div>
+      <div class="bro-list reveal">
+
+    <div class="bro-row glass">
+        <span>Brochure 25–26</span>
+
+        <a href="brochures/brochure25-26.pdf"
+           class="link-btn"
+           target="_blank">
+           View PDF
+        </a>
+    </div>
+
+    <div class="bro-row glass">
+        <span>Brochure 24–25</span>
+
+        <a href="brochures/brochure24-25.pdf"
+           class="link-btn"
+           target="_blank">
+           View PDF
+        </a>
+    </div>
+
+</div>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="contact-grid">
+      <div>
+        <div class="eyebrow reveal"><div class="rule"></div><span>Communication Bridge</span></div>
+        <h2 class="contact-h reveal">Initiate <span class="accent">Contact</span></h2>
+        <p class="contact-desc reveal">Ready to join the fleet or collaborate on a galactic project? Send a transmission or visit our base of operations.</p>
+        <div class="reveal">
+          <div class="contact-2x2">
+            <div class="contact-row glass-strong"><div class="c-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 6l10 7L22 6"/></svg></div><div><div class="c-label">Email Transmission</div><div class="c-val"><a href="mailto:neutron@igdtuw.ac.in">neutron@igdtuw.ac.in</a></div></div></div>
+            <div class="contact-row glass-strong"><div class="c-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></div><div><div class="c-label">Instagram Frequency</div><div class="c-val"><a href="https://instagram.com/neutron_igdtuw" target="_blank" rel="noopener">@neutron_igdtuw</a></div></div></div>
+            <div class="contact-row glass-strong"><div class="c-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="4"/><path d="M7 10v7M7 7v.01M12 17v-4c0-1.1.9-2 2-2s2 .9 2 2v4M12 10v7"/></svg></div><div><div class="c-label">LinkedIn Frequency</div><div class="c-val"><a href="https://linkedin.com/company/neutron-igdtuw" target="_blank" rel="noopener">Neutron IGDTUW</a></div></div></div>
+            <div class="contact-row glass-strong"><div class="c-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.4"/></svg></div><div><div class="c-label">Coordinates</div><div class="c-val">IGDTUW, Kashmere Gate, Delhi</div></div></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer><div class="foot-brand">2024 NEUTRON IGDTUW (Game Develpoment Club)</div><div class="foot-r"><div class="foot-meta">&#169; Developed by Pragya.</div></footer>
+</div>
+
+<script src="js/script.js"></script>
+<script>
+// INIT
+showView('view-home');
+</script>
+</body>
+</html>

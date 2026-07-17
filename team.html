@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEUTRON — Team</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Lexend+Deca:wght@400;500;600;700&family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<canvas id="universe-canvas"></canvas>
+
+<nav>
+  <div class="nav-brand" onclick="location.href='../index.html'">
+    <img src="../pictures/logo.png" class="nav-logo" alt="Neutron Logo">
+    NEUTRON
+  </div>
+
+  <div class="nav-links">
+    <a href="../index.html">Home</a>
+    <a href="events.html">Events</a>
+    <a href="games.html">Our Games</a>
+    <a href="team.html" class="active">Team</a>
+  </div>
+  <button class="nav-burger" onclick="toggleNav()" aria-label="Menu">
+    <span></span><span></span><span></span>
+</button>
+</nav>
+
+<div class="view" id="view-team">
+<div class="landing-hero">
+    <div class="planet planet-teams"></div>
+    <h1 class="lh-word">MEET THE TEAM</h1>
+</div>
+
+<div class="team-sec">
+
+    <!-- ================= FACULTY ================= -->
+    <div class="faculty-row">
+    <div class="tm">
+        <div class="avatar shweta"></div>
+        <div class="mname">DR. SHWETA JINDAL</div>
+    </div>
+
+    <div class="section-label">FACULTY COORDINATORS</div>
+
+    <div class="tm">
+        <div class="avatar rishabh"></div>
+        <div class="mname">DR. RISHABH KAUSHAL</div>
+    </div>
+</div>
+
+<div class="faculty-row founder-row">
+    <div class="tm">
+        <div class="avatar pari"></div>
+        <div class="mname">PARI KHAITAN</div>
+    </div>
+
+    <div class="section-label">FOUNDERS</div>
+
+    <div class="tm">
+        <div class="avatar saumya"></div>
+        <div class="mname">SAUMYA BHARTI</div>
+    </div>
+</div>
+
+    <!-- ORBIT 25-26 STARTS BELOW -->
+<div class="card-list">
+
+    <div class="e-card glass-strong" onclick="loadYearView('team','2526')">
+        <h3>Team 25-26</h3>
+        <p>A tribute to the faces behind the work, meet the core team that kept Neutron running through 2025-26.</p>
+
+        <div class="e-foot">
+            <div class="e-icon">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7dd8e8" stroke-width="1.8">
+                    <circle cx="12" cy="12" r="9"/>
+                    <circle cx="12" cy="12" r="3"/>
+                </svg>
+            </div>
+
+            <div>
+                <div class="e-lbl">Neutron Team</div>
+                <div class="e-sub">System Online</div>
+            </div>
+        </div>
+    </div>
+
+</section>
+      <div class="e-card glass-strong" onclick="loadYearView('team','2425')"><h3>Team 24-25</h3><p>A look back at the team that laid the foundation, the core members who drove Neutron through 2024-25.</p><div class="e-foot"><div class="e-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7dd8e8" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg></div><div><div class="e-lbl">Neutron Team</div><div class="e-sub">System Online</div></div></div></div>
+    </div>
+  </div>
+  <footer><div class="foot-brand">2024 NEUTRON IGDTUW (Game Develpoment Club)</div><div class="foot-r"><div class="foot-meta">&#169; Developed by Pragya.</div></footer>
+</div>
+
+<!-- Year detail content is fetched from /data and injected here -->
+<div class="view" id="view-team-detail"></div>
+
+<script src="../js/script.js"></script>
+<script>
+// INIT
+showView('view-team');
+</script>
+</body>
+</html>

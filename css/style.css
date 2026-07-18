@@ -568,8 +568,8 @@ body{
     justify-self:center;
     font-family:'JetBrains Mono', monospace;
     font-size:30px;
-    font-weight:700;
-    letter-spacing:.6em;
+    font-weight:600;
+    letter-spacing:.10em;
     text-transform:uppercase;
     color:var(--cyan);
     white-space:nowrap;

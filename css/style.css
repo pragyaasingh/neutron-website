@@ -344,16 +344,14 @@ body{
         rgba(255,255,255,0.2) 52%,
         transparent 60%
     );
+    background-size:250% 100%;
+    animation:lhShimmer 4.5s ease-in-out infinite;
     -webkit-background-clip:text;
     background-clip:text;
     -webkit-text-fill-color:transparent;
     mix-blend-mode:overlay;
     opacity:0.7;
     pointer-events:none;
-}
-.lh-word::before{
-    background-size:250% 100%;
-    animation:lhShimmer 4.5s ease-in-out infinite;
 }
 @keyframes lhShimmer{
     0%{background-position:150% 0;}

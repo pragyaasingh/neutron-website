@@ -569,7 +569,7 @@ body{
     font-family:'JetBrains Mono', monospace;
     font-size:30px;
     font-weight:700;
-    letter-spacing:.28em;
+    letter-spacing:.19em;
     text-transform:uppercase;
     color:var(--cyan);
     white-space:nowrap;

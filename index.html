@@ -12,7 +12,7 @@
 *{margin:0;padding:0;box-sizing:border-box;}
 :root{
   --cyan:#7dd8e8;--violet:#9f8cf0;--violet-dark:#6e5fd6;
-  --gold:#f0c060;--text-hi:#f4f4f8;--text-mid:#a8a8c0;--text-low:#6b6b8a;
+  --gold:#f0c060;--text-hi:#f4f4f8;--text-mid:#ffffff;--text-low:#ffffff;
   --line:rgba(255,255,255,0.08);--line-bright:rgba(255,255,255,0.18);
 }
 html{scroll-behavior:smooth;}
@@ -29,6 +29,7 @@ body{background:#000008;color:var(--text-hi);font-family:'Sora',system-ui,sans-s
     min-height:100vh;
     display:flex;
     flex-direction:column;
+    overflow:hidden;
 }
 
 #view-events.active .cards-sec,
@@ -97,17 +98,19 @@ nav{
 }
 .nav-links a{
     font-family:'JetBrains Mono',monospace;
-    font-size:14px;
+    font-size:15.5px;
+    font-weight:700;
     letter-spacing:0.14em;
     text-transform:uppercase;
     color:var(--text-mid);
     text-decoration:none;
     position:relative;
     padding-bottom:4px;
-    transition:color .2s,font-size .2s;
+    transition:color .2s,font-size .2s,text-shadow .25s;
 }
 .nav-links a:hover{
-    color:var(--text-hi);
+    color:var(--cyan);
+    text-shadow:0 0 8px rgba(125,216,232,0.85),0 0 18px rgba(125,216,232,0.5);
 }
 .nav-links a.active{
     color:var(--cyan);
@@ -571,7 +574,7 @@ body{
 .gc{border-radius:14px;padding:32px 36px;position:relative;overflow:hidden;transition:transform .2s,box-shadow .2s;}
 .gc:hover{transform:translateY(-3px);box-shadow:0 18px 52px rgba(0,0,0,0.45);}
 .gc::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1.2px;background:linear-gradient(160deg,rgba(255,255,255,0.35) 0%,rgba(255,255,255,0.06) 40%,rgba(255,255,255,0) 60%,rgba(159,140,240,0.25) 100%);-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;}
-.gc h3{font-size:20px;font-weight:700;letter-spacing:0.02em;text-transform:uppercase;color:var(--violet);margin-bottom:14px;}
+.gc h3{font-size:22px;font-weight:700;letter-spacing:0.02em;text-transform:uppercase;color:var(--cyan);margin-bottom:14px;}
 .gc p{font-size:14px;color:var(--text-mid);line-height:1.7;margin-bottom:8px;}
 .credits{font-size:12.5px;color:var(--text-low);line-height:1.6;margin-top:14px;margin-bottom:16px;}
 .credits strong{color:var(--text-mid);font-weight:600;}
@@ -582,7 +585,7 @@ body{
 .team-hero{position:relative;min-height:65vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;}
 .team-h{font-size:clamp(36px,6vw,72px);font-weight:800;letter-spacing:0.01em;position:relative;z-index:1;}
 .team-h .accent{color:var(--cyan);text-shadow:0 0 28px rgba(125,216,232,0.5);}
-.team-sec{width:100%;max-width:1400px;padding:0px 40px;margin:0 auto;}
+.team-sec{width:100%;max-width:1400px;padding:0px 40px 64px;margin:0 auto;}
 @media(max-width:768px){.team-sec{padding:40px 24px 64px;}}
 .tg-row{
     display:flex;
@@ -601,6 +604,24 @@ body{
     flex-wrap:nowrap;
     max-width:1200px;
     margin:70px auto;
+}
+.leadership-box{
+    background:rgba(255,255,255,0.035);
+    border:1px solid rgba(255,255,255,0.10);
+    border-radius:24px;
+    padding:44px 32px 30px;
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    max-width:1200px;
+    margin:0 auto;
+}
+.leadership-box .leadership-row{margin:0 auto;}
+.leadership-row .tm{width:300px;}
+.leadership-row .mname{white-space:nowrap;}
+@media(max-width:768px){
+    .leadership-box{padding:32px 20px 24px;}
+    .leadership-row .tm{width:auto;}
+    .leadership-row .mname{white-space:normal;}
 }
 .two-member-row{
     justify-content:center;
@@ -984,6 +1005,22 @@ margin-top:10px;
 .saumya{background: url("pictures/founders/saumya.jpeg") center center / cover no-repeat;}
 .pari{background-image: url("pictures/founders/pari.jpeg");background-size: cover;background-position: center;background-repeat: no-repeat;}
 .mname{margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:22px;font-weight:700;letter-spacing:.08em;color:var(--text-hi);}
+.li-link{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    margin-left:6px;
+    color:var(--cyan);
+    vertical-align:middle;
+    opacity:0.8;
+    transition:opacity .2s,transform .2s,filter .2s;
+    transform:translateY(-1px);
+}
+.li-link:hover{
+    opacity:1;
+    transform:translateY(-3px);
+    filter:drop-shadow(0 0 6px rgba(125,216,232,0.8));
+}
 .mrole{margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:20px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);}
 @media(max-width:640px){.avatar{width:96px;height:96px;}.mname{font-size:13px;}}
 @media(max-width:768px){
@@ -1062,7 +1099,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
   margin:24px auto 48px;
 }
 .orbit-wrap .leadership-row{
-  gap:80px;
+  gap:60px;
   margin:36px auto 48px;
 }
 .orbit-wrap .tg-label{
@@ -1238,8 +1275,8 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 
   <div class="nav-links">
     <a href="#" data-view="view-home" class="active">Home</a>
-    <a href="#" data-view="view-events">Events</a>
     <a href="#" data-view="view-games">Our Games</a>
+    <a href="#" data-view="view-events">Events</a>
     <a href="#" data-view="view-team">Team</a>
   </div>
   <button class="nav-burger" onclick="toggleNav()" aria-label="Menu">
@@ -1350,7 +1387,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
             <div class="contact-row glass-strong"><div class="c-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 6l10 7L22 6"/></svg></div><div><div class="c-label">Email Transmission</div><div class="c-val"><a href="mailto:neutron@igdtuw.ac.in">neutron@igdtuw.ac.in</a></div></div></div>
             <div class="contact-row glass-strong"><div class="c-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></div><div><div class="c-label">Instagram Frequency</div><div class="c-val"><a href="https://instagram.com/neutron_igdtuw" target="_blank" rel="noopener">@neutron_igdtuw</a></div></div></div>
             <div class="contact-row glass-strong"><div class="c-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="4"/><path d="M7 10v7M7 7v.01M12 17v-4c0-1.1.9-2 2-2s2 .9 2 2v4M12 10v7"/></svg></div><div><div class="c-label">LinkedIn Frequency</div><div class="c-val"><a href="https://linkedin.com/company/neutron-igdtuw" target="_blank" rel="noopener">Neutron IGDTUW</a></div></div></div>
-            <div class="contact-row glass-strong"><div class="c-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.4"/></svg></div><div><div class="c-label">Coordinates</div><div class="c-val">IGDTUW, Kashmere Gate, Delhi</div></div></div>
+            <div class="contact-row glass-strong"><div class="c-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1s-.5-.1-.7.1-.8 1-1 1.2-.4.2-.7.1a8.3 8.3 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.4-.5.2-.4a.5.5 0 0 0 0-.4c0-.1-.6-1.5-.8-2s-.4-.4-.6-.4h-.6a1 1 0 0 0-.7.3 3 3 0 0 0-1 2.3c0 1.3.9 2.6 1.1 2.8.1.2 2 3 4.7 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4s.2-1.2.2-1.3-.1-.2-.4-.3z"/><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.1-1.3A10 10 0 1 0 12 2z"/></svg></div><div><div class="c-label">WhatsApp Frequency</div><div class="c-val"><a href="https://chat.whatsapp.com/FDGUmWxv1xY4KAEIUrW8V3?s=cl&amp;p=a&amp;ilr=0" target="_blank" rel="noopener">Join our WhatsApp</a></div></div></div>
           </div>
         </div>
       </div>
@@ -1358,7 +1395,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
     </div>
   </section>
 
-  <footer><div class="foot-brand">2024 NEUTRON IGDTUW (Game Develpoment Club)</div><div class="foot-r"><div class="foot-meta">&#169; Developed by Pragya.</div></footer>
+  <footer><div class="foot-brand">2024 NEUTRON IGDTUW (Game Develpoment Club)</div><div class="foot-r"><div class="foot-meta">&#169; Developed by Pragya.</div></div></footer>
 </div>
 <div class="view" id="view-team-2526">
 <div class="orbit-wrap">
@@ -1376,13 +1413,14 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
     <span>LEADERSHIP</span>
 </div>
 
+<div class="leadership-box">
 <div class="tg-row leadership-row">
 
     <div class="tm" id="t2526-pragya">
         <div class="avatar avatar-large">
             <img src="pictures/25-26/pragya.jpeg" alt="Pragya">
         </div>
-        <div class="mname">PRAGYA</div>
+        <div class="mname">PRAGYA <a class="li-link" href="https://www.linkedin.com/in/pragya-singh-327130288/" target="_blank" rel="noopener" aria-label="Pragya's LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></a></div>
         <div class="mrole">PRESIDENT</div>
     </div>
 
@@ -1390,7 +1428,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
         <div class="avatar avatar-large">
             <img src="pictures/25-26/kavya.jpeg" alt="Kavya">
         </div>
-        <div class="mname">KAVYA CHAUDARI</div>
+        <div class="mname">KAVYA CHAUDARI <a class="li-link" href="https://www.linkedin.com/in/kavya-chaudhari-117922284/" target="_blank" rel="noopener" aria-label="Kavya's LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></a></div>
         <div class="mrole">VICE PRESIDENT</div>
     </div>
 
@@ -1398,10 +1436,11 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
         <div class="avatar avatar-large">
             <img src="pictures/25-26/mansi.jpeg" alt="Mansi">
         </div>
-        <div class="mname">MANSI SOLANKI</div>
+        <div class="mname">MANSI SOLANKI <a class="li-link" href="https://www.linkedin.com/in/mansi-solanki-a7b13428a/" target="_blank" rel="noopener" aria-label="Mansi's LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></a></div>
         <div class="mrole">TREASURER</div>
     </div>
 
+</div>
 </div>
 
 <div class="tg-row dual-groups">
@@ -1502,6 +1541,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 
 </div>
 </div>
+<footer><div class="foot-brand">2024 NEUTRON IGDTUW (Game Develpoment Club)</div><div class="foot-r"><div class="foot-meta">&#169; Developed by Pragya.</div></div></footer>
 </div>
 
 <!-- ====== EVENTS LANDING ====== -->
@@ -1521,7 +1561,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
       </div>
     </div>
   </div>
-  <footer><div class="foot-brand">2024 NEUTRON IGDTUW (Game Develpoment Club)</div><div class="foot-r"><div class="foot-meta">&#169; Developed by Pragya.</div></footer>
+  <footer><div class="foot-brand">2024 NEUTRON IGDTUW (Game Develpoment Club)</div><div class="foot-r"><div class="foot-meta">&#169; Developed by Pragya.</div></div></footer>
 </div>
 
 <!-- ====== EVENTS 25-26 ====== -->
@@ -1566,6 +1606,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
     <div class="memory-half"><img src="memorylane/2526/ML8.png" alt="ML8"></div>
   </div>
   </div>
+  <footer><div class="foot-brand">2024 NEUTRON IGDTUW (Game Develpoment Club)</div><div class="foot-r"><div class="foot-meta">&#169; Developed by Pragya.</div></div></footer>
 </div>
 
 <!-- ====== EVENTS 24-25 ====== -->
@@ -1621,7 +1662,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
         </div>
     </div>
 </div>
-
+<footer><div class="foot-brand">2024 NEUTRON IGDTUW (Game Develpoment Club)</div><div class="foot-r"><div class="foot-meta">&#169; Developed by Pragya.</div></div></footer>
 </div>
 
 <!-- ====== GAMES LANDING ====== -->
@@ -1633,7 +1674,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
       <div class="e-card glass-strong" onclick="showView('view-games-2425')"><h3>Our Games 24-25</h3><p>Step back into the work that started it all, showcasing the games built by Neutron's 2024-25 team, laying the groundwork for the club's vision and everything that came after.</p><div class="e-foot"><div class="e-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7dd8e8" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg></div><div><div class="e-lbl">Neutron's Game</div><div class="e-sub">System Online</div></div></div></div>
     </div>
   </div>
-  <footer><div class="foot-brand">2024 NEUTRON IGDTUW (Game Develpoment Club)</div><div class="foot-r"><div class="foot-meta">&#169; Developed by Pragya.</div></footer>
+  <footer><div class="foot-brand">2024 NEUTRON IGDTUW (Game Develpoment Club)</div><div class="foot-r"><div class="foot-meta">&#169; Developed by Pragya.</div></div></footer>
 </div>
 
 <!-- ====== GAMES 25-26 ====== -->
@@ -1669,6 +1710,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
       <a href="https://zainabtanweer.itch.io/zero-hour-escape" target="_blank" rel="noopener noreferrer" class="lnk">Link</a></div>
     </div>
   </div>
+  <footer><div class="foot-brand">2024 NEUTRON IGDTUW (Game Develpoment Club)</div><div class="foot-r"><div class="foot-meta">&#169; Developed by Pragya.</div></div></footer>
 </div>
 
 <!-- ====== GAMES 24-25 ====== -->
@@ -1684,6 +1726,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
       <div class="gc glass"><h3>Fred in the Fright House</h3><p>A 3D horror-puzzle adventure where you guide Fred (a self-declared coward) through a haunted mansion. Dared by his friends, Fred steps inside and immediately regrets everything. Team up with a friendly spirit to find 3 hidden keys while dodging every ghost.</p><p>Sneak through creepy hallways, crack candle puzzles, color codes, and symbol locks. Scary? Yes. Fun? Absolutely.</p><div class="credits"><strong>Developed by:</strong> Akanksha Bathla (CSE), Harshita Agarwal (CSE-AI), Prachi Kumari (CSE-AI), Swarnima (CSE), Vanshika (CSE-AI), Vedika (CSE-AI)</div><a href="#" class="lnk">Link</a></div>
     </div>
   </div>
+  <footer><div class="foot-brand">2024 NEUTRON IGDTUW (Game Develpoment Club)</div><div class="foot-r"><div class="foot-meta">&#169; Developed by Pragya.</div></div></footer>
 </div>
 
 <!-- ====== TEAM ====== -->
@@ -1766,11 +1809,10 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
         </div>
     </div>
 
-</section>
       <div class="e-card glass-strong" onclick="showView('view-team-2425')"><h3>Team 24-25</h3><p>A look back at the team that laid the foundation, the core members who drove Neutron through 2024-25.</p><div class="e-foot"><div class="e-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7dd8e8" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg></div><div><div class="e-lbl">Neutron Team</div><div class="e-sub">System Online</div></div></div></div>
     </div>
   </div>
-  <footer><div class="foot-brand">2024 NEUTRON IGDTUW (Game Develpoment Club)</div><div class="foot-r"><div class="foot-meta">&#169; Developed by Pragya.</div></footer>
+  <footer><div class="foot-brand">2024 NEUTRON IGDTUW (Game Develpoment Club)</div><div class="foot-r"><div class="foot-meta">&#169; Developed by Pragya.</div></div></footer>
 </div>
 
 </div>
@@ -1788,6 +1830,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 </div>
 
 <div class="tg-label"><span>LEADERSHIP</span></div>
+<div class="leadership-box">
 <div class="tg-row leadership-row">
 
     <div class="tm" id="t2425-prachi">
@@ -1812,6 +1855,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
         <div class="mname">SHRISTY RANJAN</div>
         <div class="mrole">PRESIDENT</div>
     </div>
+</div>
 </div>
 
 <!-- ROW 1 -->
@@ -1924,6 +1968,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 </div>
 
 </div><!-- /orbit-wrap -->
+<footer><div class="foot-brand">2024 NEUTRON IGDTUW (Game Develpoment Club)</div><div class="foot-r"><div class="foot-meta">&#169; Developed by Pragya.</div></div></footer>
 </div>
 
 <!-- ====== TEAM 26-27 (DRAFT) ====== -->
@@ -1947,6 +1992,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
     <span>LEADERSHIP</span>
 </div>
 
+<div class="leadership-box">
 <div class="tg-row leadership-row">
 
     <div class="tm" id="t2627-mitali">
@@ -1974,12 +2020,13 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
     </div>
 
 </div>
+</div>
 
 <!-- ROW 2: Media & Creative Cores -->
-<div class="tg-row pos-row">
+<div class="tg-row dual-groups">
 
-    <div class="pos-box">
-        <div class="pos-members">
+    <div class="team-group">
+        <div class="group-members">
 
             <div class="tm" id="t2627-mahak">
                 <div class="avatar">
@@ -1996,16 +2043,16 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
             </div>
 
         </div>
-        <div class="pos-label">MEDIA &amp; CREATIVE CORES</div>
+        <div class="tg-label"><span>MEDIA &amp; CREATIVE CORES</span></div>
     </div>
 
 </div>
 
 <!-- ROW 3: Development Cores + Development Mentors -->
-<div class="tg-row pos-row">
+<div class="tg-row dual-groups">
 
-    <div class="pos-box">
-        <div class="pos-members">
+    <div class="team-group">
+        <div class="group-members">
 
             <div class="tm" id="t2627-shraddha">
                 <div class="avatar"><img src="pictures/26-27/shraddha.jpeg" alt="Shraddha"></div>
@@ -2018,11 +2065,11 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
             </div>
 
         </div>
-        <div class="pos-label">DEVELOPMENT CORES</div>
+        <div class="tg-label"><span>DEVELOPMENT CORES</span></div>
     </div>
 
-    <div class="pos-box">
-        <div class="pos-members">
+    <div class="team-group">
+        <div class="group-members">
 
             <div class="tm" id="t2627-priyanshi">
                 <div class="avatar"><img src="pictures/26-27/priyanshi.jpeg" alt="Priyanshi"></div>
@@ -2035,16 +2082,16 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
             </div>
 
         </div>
-        <div class="pos-label">DEVELOPMENT MENTORS</div>
+        <div class="tg-label"><span>DEVELOPMENT MENTORS</span></div>
     </div>
 
 </div>
 
 <!-- ROW 4: Outreach Cores + Event Management Cores -->
-<div class="tg-row pos-row">
+<div class="tg-row dual-groups">
 
-    <div class="pos-box">
-        <div class="pos-members">
+    <div class="team-group">
+        <div class="group-members">
 
             <div class="tm" id="t2627-sumaria">
                 <div class="avatar"><img src="pictures/26-27/sumaria.jpeg" alt="Sumaria"></div>
@@ -2057,11 +2104,11 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
             </div>
 
         </div>
-        <div class="pos-label">OUTREACH CORES</div>
+        <div class="tg-label"><span>OUTREACH CORES</span></div>
     </div>
 
-    <div class="pos-box">
-        <div class="pos-members">
+    <div class="team-group">
+        <div class="group-members">
 
             <div class="tm" id="t2627-shreya">
                 <div class="avatar"><img src="pictures/26-27/shreya.jpeg" alt="Shreya"></div>
@@ -2074,12 +2121,13 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
             </div>
 
         </div>
-        <div class="pos-label">EVENT MANAGEMENT CORES</div>
+        <div class="tg-label"><span>EVENT MANAGEMENT CORES</span></div>
     </div>
 
 </div>
 
 </div>
+<footer><div class="foot-brand">2024 NEUTRON IGDTUW (Game Develpoment Club)</div><div class="foot-r"><div class="foot-meta">&#169; Developed by Pragya.</div></div></footer>
 </div>
 
 <script>

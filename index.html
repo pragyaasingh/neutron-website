@@ -52,16 +52,16 @@ body{background:#000008;color:var(--text-hi);font-family:'Sora',system-ui,sans-s
 nav{
   position:fixed;top:0;left:0;right:0;z-index:100;
   display:flex;align-items:center;justify-content:space-between;
-  padding:18px 48px;
+  padding:22px 48px;
   background:rgba(0,0,16,0.55);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
   border-bottom:1px solid rgba(255,255,255,0.06);
 }
-.nav-brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:15px;letter-spacing:0.1em;cursor:pointer;color:var(--text-hi);text-decoration:none;}
-.nav-logo{width:36px;height:36px;border-radius:50%;object-fit:cover;display:block;overflow:hidden;}
-.nav-links{display:flex;gap:36px;}
-.nav-links a{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-mid);text-decoration:none;position:relative;padding-bottom:4px;transition:color .2s,font-size .2s;}
+.nav-brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:16px;letter-spacing:0.1em;cursor:pointer;color:var(--text-hi);text-decoration:none;}
+.nav-logo{width:40px;height:40px;border-radius:50%;object-fit:cover;display:block;overflow:hidden;}
+.nav-links{display:flex;gap:38px;}
+.nav-links a{font-family:'JetBrains Mono',monospace;font-size:12.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-mid);text-decoration:none;position:relative;padding-bottom:4px;transition:color .2s,font-size .2s;}
 .nav-links a:hover{color:var(--text-hi);}
-.nav-links a.active{color:var(--cyan);font-size:13px;}
+.nav-links a.active{color:var(--cyan);font-size:14.5px;}
 .nav-links a.active::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1.5px;background:var(--cyan);}
 .nav-burger{display:none;flex-direction:column;justify-content:center;gap:5px;width:32px;height:32px;background:none;border:none;cursor:pointer;padding:0;}
 .nav-burger span{display:block;width:100%;height:2px;background:var(--text-hi);border-radius:2px;}
@@ -76,7 +76,7 @@ nav{
     .nav-links.open{display:flex;}
     .nav-links a{padding:14px 24px;width:100%;box-sizing:border-box;}
 }
-@media(max-width:768px){nav{padding:16px 24px;}}
+@media(max-width:768px){nav{padding:18px 24px;}}
 
 /* HERO */
 .hero-section{
@@ -1341,37 +1341,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
     <div>EVENT MANAGEMENT CORES</div>
 
 </div>
-
-  <!-- MEMORY LANE 25-26 -->
-  <div class="orbit-memory-title">
-    <h2>MEMORY LANE</h2>
 </div>
-    <div class="memory-grid">
-    <!-- ML1 -->
-    <div class="memory-big"><img src="memorylane/2526/ML1.png" alt="ML1"></div>
-    <!-- ML2 + ML3 -->
-    <div class="memory-row">
-        <div class="memory-half"><img src="memorylane/2526/ML2.png" alt="ML2"></div>
-        <div class="memory-half"><img src="memorylane/2526/ML3.png" alt="ML3"></div>
-      </div>
-    <!-- ML4 -->
-    <div class="memory-big"><img src="memorylane/2526/ML4.png" alt="ML4"></div>
-  <!-- ML5 + ML6 -->
-<div class="memory-row">
-    <div class="memory-half"><img src="memorylane/2526/ML5.png" alt="ML5"></div>
-    <div class="memory-half"><img src="memorylane/2526/ML6.png" alt="ML6"></div>
-    </div>
-  <!-- ML7 + ML8 -->
-<div class="memory-row">
-    <div class="memory-half"><img src="memorylane/2526/ML7.png" alt="ML7"></div>
-    <div class="memory-half"><img src="memorylane/2526/ML8.png" alt="ML8"></div>
-  </div>
-  </div>
-</div>
-</div>
-</div>
-
-</div><!-- /orbit-wrap -->
 </div>
 
 <!-- ====== EVENTS LANDING ====== -->
@@ -1410,6 +1380,32 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
     <div class="tl-row left"><div class="tl-dot"></div><div class="tc glass"><div class="tc-top"><span class="log-tag">Logs: 05</span><div class="ti"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="9"/></svg></div></div><h3>NEUTRON ORIGINALS: Game Arena</h3><p>A game showcase where the Development team presented their original game projects, competing for best pitch and best overall.</p></div><div class="td">27 April, 2026</div></div>
     <div class="tl-row right"><div class="tl-dot"></div><div class="td">27 April, 2026</div><div class="tc glass"><div class="tc-top"><span class="log-tag">Logs: 06</span><div class="ti"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 21h8M12 3v12M8 8a4 4 0 008 0"/></svg></div></div><h3>Felicitation 25-26</h3><p>A felicitation ceremony celebrating Neutron's finest, honoring the best members with medals in recognition of their contributions and achievements.</p></div></div>
   </div>
+
+  <!-- MEMORY LANE 25-26 -->
+  <div class="orbit-memory-title">
+    <h2>MEMORY LANE</h2>
+</div>
+    <div class="memory-grid">
+    <!-- ML1 -->
+    <div class="memory-big"><img src="memorylane/2526/ML1.png" alt="ML1"></div>
+    <!-- ML2 + ML3 -->
+    <div class="memory-row">
+        <div class="memory-half"><img src="memorylane/2526/ML2.png" alt="ML2"></div>
+        <div class="memory-half"><img src="memorylane/2526/ML3.png" alt="ML3"></div>
+      </div>
+    <!-- ML4 -->
+    <div class="memory-big"><img src="memorylane/2526/ML4.png" alt="ML4"></div>
+  <!-- ML5 + ML6 -->
+<div class="memory-row">
+    <div class="memory-half"><img src="memorylane/2526/ML5.png" alt="ML5"></div>
+    <div class="memory-half"><img src="memorylane/2526/ML6.png" alt="ML6"></div>
+    </div>
+  <!-- ML7 + ML8 -->
+<div class="memory-row">
+    <div class="memory-half"><img src="memorylane/2526/ML7.png" alt="ML7"></div>
+    <div class="memory-half"><img src="memorylane/2526/ML8.png" alt="ML8"></div>
+  </div>
+  </div>
 </div>
 
 <!-- ====== EVENTS 24-25 ====== -->
@@ -1425,6 +1421,47 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
     <div class="tl-row right"><div class="tl-dot"></div><div class="td">22 April, 2026</div><div class="tc glass"><div class="tc-top"><span class="log-tag">Logs: 02</span><div class="ti"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="9"/></svg></div></div><h3>NEUTRON ORIGINALS: Game Arena</h3><p>A game showcase where the Development team presented their original projects and medals were awarded to the best pitch and best overall game.</p></div></div>
     <div class="tl-row left"><div class="tl-dot"></div><div class="tc glass"><div class="tc-top"><span class="log-tag">Logs: 03</span><div class="ti"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 21h8M12 3v12M8 8a4 4 0 008 0"/></svg></div></div><h3>Felicitation 24-25</h3><p>A celebration of Neutron's finest &#8212; honoring standout members from every team and the core team with medals, recognizing their hard work and dedication throughout the tenure.</p></div><div class="td">22 April, 2026</div></div>
   </div>
+
+<!-- MEMORY LANE 24-25 -->
+<div class="memory-lane-2425">
+
+    <div class="memory-title-wrap-2425">
+        <div class="memory-title-2425">
+            MEMORY LANE
+        </div>
+    </div>
+
+    <div class="memory-grid-2425">
+        <!-- ML1 -->
+        <div class="memory-big-2425">
+            <img src="memorylane/2425/ML25-1.png" alt="">
+        </div>
+        <!-- ML2 + ML3 -->
+        <div class="memory-row-2425">
+            <div class="memory-half-2425">
+                <img src="memorylane/2425/ML25-2.png" alt="">
+            </div>
+
+            <div class="memory-half-2425">
+                <img src="memorylane/2425/ML25-3.png" alt="">
+            </div>
+        </div>
+        <!-- ML4 -->
+        <div class="memory-big-2425">
+            <img src="memorylane/2425/ML25-4.png" alt="">
+        </div>
+        <!-- ML5 + ML6 -->
+        <div class="memory-row-2425">
+            <div class="memory-half-2425">
+                <img src="memorylane/2425/ML25-5.png" alt="">
+            </div>
+            <div class="memory-half-2425">
+                <img src="memorylane/2425/ML25-6.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
 </div>
 
 <!-- ====== GAMES LANDING ====== -->
@@ -1507,8 +1544,27 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
     </div>
 </div>
 
-    <!-- ORBIT 25-26 STARTS BELOW -->
+    <!-- ORBIT 26-27 STARTS BELOW -->
 <div class="card-list">
+
+    <div class="e-card glass-strong" onclick="showView('view-team-2627')">
+        <h3>Team 26-27</h3>
+        <p>Meet the new core team leading Neutron through 2026-27.</p>
+
+        <div class="e-foot">
+            <div class="e-icon">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7dd8e8" stroke-width="1.8">
+                    <circle cx="12" cy="12" r="9"/>
+                    <circle cx="12" cy="12" r="3"/>
+                </svg>
+            </div>
+
+            <div>
+                <div class="e-lbl">Neutron Team</div>
+                <div class="e-sub">System Online</div>
+            </div>
+        </div>
+    </div>
 
     <div class="e-card glass-strong" onclick="showView('view-team-2526')">
         <h3>Team 25-26</h3>
@@ -1686,48 +1742,154 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 
 </div>
 
-<!-- MEMORY LANE 24-25 -->
-<div class="memory-lane-2425">
-
-    <div class="memory-title-wrap-2425">
-        <div class="memory-title-2425">
-            MEMORY LANE
-        </div>
-    </div>
-
-    <div class="memory-grid-2425">
-        <!-- ML1 -->
-        <div class="memory-big-2425">
-            <img src="memorylane/2425/ML25-1.png" alt="">
-        </div>
-        <!-- ML2 + ML3 -->
-        <div class="memory-row-2425">
-            <div class="memory-half-2425">
-                <img src="memorylane/2425/ML25-2.png" alt="">
-            </div>
-
-            <div class="memory-half-2425">
-                <img src="memorylane/2425/ML25-3.png" alt="">
-            </div>
-        </div>
-        <!-- ML4 -->
-        <div class="memory-big-2425">
-            <img src="memorylane/2425/ML25-4.png" alt="">
-        </div>
-        <!-- ML5 + ML6 -->
-        <div class="memory-row-2425">
-            <div class="memory-half-2425">
-                <img src="memorylane/2425/ML25-5.png" alt="">
-            </div>
-            <div class="memory-half-2425">
-                <img src="memorylane/2425/ML25-6.png" alt="">
-            </div>
-        </div>
-    </div>
-</div>
-
 </div><!-- /orbit-wrap -->
 </div>
+
+<!-- ====== TEAM 26-27 (DRAFT) ====== -->
+<!-- Structure only — add photos to pictures/26-27/ and fill in names/roles below.
+     Follow the same pattern as Team 25-26: leadership row (3), two paired groups
+     (outreach + media), then the five-member row with its labels underneath. -->
+<div class="view" id="view-team-2627">
+<div class="orbit-wrap">
+  <div class="orbit-topbar">
+    <button class="back-btn" onclick="showView('view-team')">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+      Back to Team
+    </button>
+  </div>
+  <div class="orbit-title">
+    <span>ORBIT 26-27</span>
+  </div>
+
+<!-- LEADERSHIP: President / Vice President / Treasurer -->
+<div class="tg-label">
+    <span>LEADERSHIP</span>
+</div>
+
+<div class="tg-row leadership-row">
+
+    <div class="tm" id="t2627-name1">
+        <div class="avatar avatar-large">
+            <img src="pictures/26-27/name1.jpeg" alt="Name">
+        </div>
+        <div class="mname">NAME</div>
+        <div class="mrole">PRESIDENT</div>
+    </div>
+
+    <div class="tm" id="t2627-name2">
+        <div class="avatar avatar-large">
+            <img src="pictures/26-27/name2.jpeg" alt="Name">
+        </div>
+        <div class="mname">NAME</div>
+        <div class="mrole">VICE PRESIDENT</div>
+    </div>
+
+    <div class="tm" id="t2627-name3">
+        <div class="avatar avatar-large">
+            <img src="pictures/26-27/name3.jpeg" alt="Name">
+        </div>
+        <div class="mname">NAME</div>
+        <div class="mrole">TREASURER</div>
+    </div>
+
+</div>
+
+<!-- Two paired groups, e.g. Outreach + Media (rename/duplicate as needed) -->
+<div class="tg-row dual-groups">
+
+    <!-- GROUP 1 -->
+    <div class="team-group">
+
+        <div class="group-members">
+
+            <div class="tm" id="t2627-name4">
+                <div class="avatar">
+                    <img src="pictures/26-27/name4.jpeg" alt="Name">
+                </div>
+                <div class="mname">NAME</div>
+            </div>
+
+            <div class="tm" id="t2627-name5">
+                <div class="avatar">
+                    <img src="pictures/26-27/name5.jpeg" alt="Name">
+                </div>
+                <div class="mname">NAME</div>
+            </div>
+        </div>
+        <div class="tg-label">
+            <span>GROUP 1 LABEL</span>
+        </div>
+    </div>
+
+    <!-- GROUP 2 -->
+    <div class="team-group">
+
+        <div class="group-members">
+
+            <div class="tm" id="t2627-name6">
+                <div class="avatar">
+                    <img src="pictures/26-27/name6.jpeg" alt="Name">
+                </div>
+                <div class="mname">NAME</div>
+            </div>
+
+            <div class="tm" id="t2627-name7">
+                <div class="avatar">
+                    <img src="pictures/26-27/name7.jpeg" alt="Name">
+                </div>
+                <div class="mname">NAME</div>
+            </div>
+
+        </div>
+        <div class="tg-label">
+            <span>GROUP 2 LABEL</span>
+        </div>
+    </div>
+
+</div>
+
+<!-- Five-member row, e.g. Game Dev Cores / Mentor / Event Management -->
+<div class="tg-row five-members">
+
+    <div class="tm">
+        <div class="avatar"><img src="pictures/26-27/name8.jpeg" alt="Name"></div>
+        <div class="mname">NAME</div>
+    </div>
+
+    <div class="tm">
+        <div class="avatar"><img src="pictures/26-27/name9.jpeg" alt="Name"></div>
+        <div class="mname">NAME</div>
+    </div>
+
+    <div class="tm">
+        <div class="avatar"><img src="pictures/26-27/name10.jpeg" alt="Name"></div>
+        <div class="mname">NAME</div>
+    </div>
+
+    <div class="tm">
+        <div class="avatar"><img src="pictures/26-27/name11.jpeg" alt="Name"></div>
+        <div class="mname">NAME</div>
+    </div>
+
+    <div class="tm">
+        <div class="avatar"><img src="pictures/26-27/name12.jpeg" alt="Name"></div>
+        <div class="mname">NAME</div>
+    </div>
+
+</div>
+
+<div class="five-labels">
+
+    <div>LABEL 1</div>
+
+    <div>LABEL 2</div>
+
+    <div>LABEL 3</div>
+
+</div>
+</div>
+</div>
+
 <script>
     
 // CSS STARFIELD
@@ -1746,7 +1908,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 
 // VIEW SWITCHING
 var navLinks=Array.prototype.slice.call(document.querySelectorAll('.nav-links a[data-view]'));
-var subP={'view-events-2526':'view-events','view-events-2425':'view-events','view-games-2526':'view-games','view-games-2425':'view-games','view-team-2526':'view-team','view-team-2425':'view-team'};
+var subP={'view-events-2526':'view-events','view-events-2425':'view-events','view-games-2526':'view-games','view-games-2425':'view-games','view-team-2526':'view-team','view-team-2425':'view-team','view-team-2627':'view-team'};
 
 function showView(id){
   Array.prototype.forEach.call(document.querySelectorAll('.view'),function(v){v.classList.remove('active');});

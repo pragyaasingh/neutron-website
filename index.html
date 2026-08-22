@@ -24,6 +24,23 @@ body{background:#000008;color:var(--text-hi);font-family:'Sora',system-ui,sans-s
 .view{display:none;position:relative;z-index:1;}
 .view.active{display:block;}
 
+#view-events.active,
+#view-games.active{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+}
+
+#view-events.active .cards-sec,
+#view-games.active .cards-sec{
+    flex:1;
+}
+
+#view-events.active footer,
+#view-games.active footer{
+    margin-top:0;
+}
+
 /* LIQUID GLASS */
 .glass{
   background:rgba(10,10,28,0.72);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
@@ -52,19 +69,77 @@ body{background:#000008;color:var(--text-hi);font-family:'Sora',system-ui,sans-s
 nav{
   position:fixed;top:0;left:0;right:0;z-index:100;
   display:flex;align-items:center;justify-content:space-between;
-  padding:22px 48px;
+  padding:14px 48px;
   background:rgba(0,0,16,0.55);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
   border-bottom:1px solid rgba(255,255,255,0.06);
 }
-.nav-brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:16px;letter-spacing:0.1em;cursor:pointer;color:var(--text-hi);text-decoration:none;}
-.nav-logo{width:40px;height:40px;border-radius:50%;object-fit:cover;display:block;overflow:hidden;}
-.nav-links{display:flex;gap:38px;}
-.nav-links a{font-family:'JetBrains Mono',monospace;font-size:12.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-mid);text-decoration:none;position:relative;padding-bottom:4px;transition:color .2s,font-size .2s;}
-.nav-links a:hover{color:var(--text-hi);}
-.nav-links a.active{color:var(--cyan);font-size:14.5px;}
-.nav-links a.active::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1.5px;background:var(--cyan);}
-.nav-burger{display:none;flex-direction:column;justify-content:center;gap:5px;width:32px;height:32px;background:none;border:none;cursor:pointer;padding:0;}
-.nav-burger span{display:block;width:100%;height:2px;background:var(--text-hi);border-radius:2px;}
+.nav-brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-weight:700;
+    font-size:18px;
+    letter-spacing:0.1em;
+    cursor:pointer;
+    color:var(--text-hi);
+    text-decoration:none;
+}
+.nav-logo{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    object-fit:cover;
+    display:block;
+    overflow:hidden;
+}
+.nav-links{
+    display:flex;gap:38px;
+}
+.nav-links a{
+    font-family:'JetBrains Mono',monospace;
+    font-size:14px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--text-mid);
+    text-decoration:none;
+    position:relative;
+    padding-bottom:4px;
+    transition:color .2s,font-size .2s;
+}
+.nav-links a:hover{
+    color:var(--text-hi);
+}
+.nav-links a.active{
+    color:var(--cyan);
+    font-size:16px;
+}
+.nav-links a.active::after{
+    content:'';
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    height:1.5px;
+    background:var(--cyan);
+}
+.nav-burger{
+    display:none;
+    flex-direction:column;
+    justify-content:center;
+    gap:5px;
+    width:32px;
+    height:32px;
+    background:none;
+    border:none;
+    cursor:pointer;
+    padding:0;}
+.nav-burger span{
+    display:block;
+    width:100%;
+    height:2px;
+    background:var(--text-hi);
+    border-radius:2px;
+}
 @media(max-width:640px){
     .nav-burger{display:flex;}
     .nav-links{
@@ -85,7 +160,7 @@ nav{
   text-align:center;padding:120px 32px 120px;overflow:visible;
 }
 .hero-sphere{
-    position:absolute;width:1200px;height:1200px;left:50%;top:75px;
+    position:absolute;width:1400px;height:1400px;left:50%;top:150px;
     transform:translateX(-50%);border-radius:50%;
     background: radial-gradient(
         68.27% 68.88% at 35.92% 2.32%,
@@ -318,7 +393,7 @@ body{
 .sub-btn:active{transform:scale(0.99);}
 
 /* LANDING HERO (events/games) */
-.landing-hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:visible;border-bottom:none;box-shadow:none;}
+.landing-hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:visible;border-bottom:none;box-shadow:none;padding-top:70px;}
 .landing-hero + .content-section{margin-top:-1px;}
 .lh-word{
     font-family:'Lexend Deca',sans-serif;
@@ -382,7 +457,7 @@ body{
 /* 3D PLANETS */
 .planet{position:absolute;border-radius:50%;pointer-events:none;animation:pBreath 8s ease-in-out infinite;}
 .planet-events{
-    width:1200px;height:1200px;top:90%;left:50%;
+    width:1400px;height:1400px;top:115%;left:50%;
     transform:translate(-50%,-50%) rotate(-14.562deg);border-radius:50%;
     background:radial-gradient(
         68.27% 68.88% at 35.92% 2.32%,
@@ -392,7 +467,7 @@ body{
     );
 }
 .planet-games{
-    width:1200px;height:1200px;top:90%;left:50%;
+    width:1400px;height:1400px;top:115%;left:50%;
     transform:translate(-50%,-50%) rotate(-14.562deg);border-radius:50%;
     background: radial-gradient(
     68.27% 68.88% at 35.92% 2.32%,
@@ -402,7 +477,7 @@ body{
 );
 }
 .planet-teams{
-    width:1200px;height:1200px;top:90%;left:50%;
+    width:1400px;height:1400px;top:115%;left:50%;
     transform:translate(-50%,-50%) rotate(-14.562deg);border-radius:50%;
     background: radial-gradient(
     68.27% 68.88% at 35.92% 2.32%,
@@ -414,12 +489,12 @@ body{
 @keyframes pBreath{0%,100%{filter:brightness(1);}50%{filter:brightness(1.06);}}
 
 /* CARDS SECTION */
-.cards-sec{position:relative;z-index:1;padding:80px 64px 100px;}
+.cards-sec{position:relative;z-index:1;padding:80px 64px 40px;}
 @media(max-width:768px){.cards-sec{padding:48px 24px 64px;}}
+
 .card-list{display:flex;flex-direction:column;gap:24px;}
 .e-card{border-radius:16px;padding:36px 40px;cursor:pointer;transition:transform .22s,box-shadow .22s;position:relative;}
 .e-card:hover{transform:translateY(-4px);box-shadow:0 20px 60px rgba(0,0,0,0.5);}
-
 
 .e-card h3{font-size:24px;font-weight:600;margin-bottom:12px;}
 .e-card p{font-size:14.5px;color:var(--text-mid);line-height:1.7;max-width:none;margin-bottom:22px;}
@@ -656,7 +731,7 @@ margin-top:10px;
     display:flex;
     justify-content:center;
     align-items:flex-start;
-    gap:60px;
+    gap:10px;
     margin-bottom:18px;
 }
 .team-group .tg-label{
@@ -676,7 +751,7 @@ margin-top:10px;
     display:flex;
     justify-content:center;
     align-items:flex-start;
-    gap:140px;
+    gap:11px;
     margin:0 auto 70px;
 }
 .dual-groups .team-group{
@@ -687,11 +762,14 @@ margin-top:10px;
 .dual-groups .group-members{
     display:flex;
     justify-content:center;
-    gap:55px;
+    gap:25px;
     margin-top:30px;
 }
 .dual-groups .tg-label{
     margin:0;
+}
+.dual-groups.three-groups{
+    gap:15px;
 }
 .five-members{
     display:flex;
@@ -746,6 +824,8 @@ margin-top:10px;
     height:100%;
     object-fit:cover;
     display:block;
+    font-size:0;
+    color:transparent;
 }
 .avatar:hover{
     transform:translateY(-6px);
@@ -791,6 +871,11 @@ margin-top:10px;
     margin-top:80px;
     padding-top:48px;
     border-top:none;
+    max-width:1400px;
+    padding-left:64px;
+    padding-right:64px;
+    margin-left:auto;
+    margin-right:auto;
 }
 .memory-title-2425{
     position:relative;
@@ -861,7 +946,7 @@ margin-top:10px;
     display:flex;
     justify-content:center;
     align-items:flex-start;
-    gap:80px;
+    gap:11px;
     margin:55px 0;
     flex-wrap:nowrap;
 }
@@ -872,11 +957,28 @@ margin-top:10px;
     align-items:center;
 }
 /* Members inside one section */
-.tg-members{display:flex;justify-content:center;gap:32px;margin-bottom:18px;}
+.tg-members{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    margin-bottom:18px;
+}
 /* Keep Content Core centered */
 .team-group:has(.tg-members .tm:only-child) .tg-members{justify-content:center;}
 /* Label below members */
 .team-group .tg-label{margin-top:6px;text-align:center;}
+
+/* Transparent position box — wraps each existing team-group
+   (Outreach, Media, Game Dev, Content, Event Management, etc.)
+   without changing their alignment; much lighter than .glass. */
+.team-group{
+    background:rgba(255,255,255,0.035);
+    border:1px solid rgba(255,255,255,0.10);
+    border-radius:20px;
+    padding:20px 9px 19px;
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+}
 .shweta{background:url("pictures/faculty-coordinators/shweta.jpeg") center center / cover no-repeat;}
 .rishabh{background:url("pictures/faculty-coordinators/rishabh.jpeg") center center/cover no-repeat;}
 .saumya{background: url("pictures/founders/saumya.jpeg") center center / cover no-repeat;}
@@ -956,7 +1058,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 
 /* Tighten all row gaps in orbit pages */
 .orbit-wrap .tg-row{
-  gap:48px;
+  gap: 15px;
   margin:24px auto 48px;
 }
 .orbit-wrap .leadership-row{
@@ -967,11 +1069,63 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
   margin:0 0 0;
 }
 
+/* TEAM 26-27 — position boxes: translucent glass cards, one per
+   position, holding its circle(s), name(s), a rule, and its label.
+   Reused for Media & Creative Cores (single box) and the paired rows
+   (Development Cores/Mentors, Outreach/Event Management). */
+.pos-row{
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  flex-wrap:wrap;
+  gap:32px;
+  margin:40px auto 0;
+}
+.pos-box{
+  background:rgba(255,255,255,0.035);
+  border:1px solid rgba(255,255,255,0.10);
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  border-radius:20px;
+  padding:26px 34px 20px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+.pos-members{
+  display:flex;
+  justify-content:center;
+  gap:40px;
+}
+.pos-label{
+  width:100%;
+  margin-top:24px;
+  padding-top:14px;
+  border-top:1px solid rgba(125,216,232,.35);
+  text-align:center;
+  font-family:'JetBrains Mono',monospace;
+  font-size:18px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--cyan);
+}
+@media(max-width:768px){
+  .pos-row{gap:24px;}
+  .pos-box{padding:28px 24px 22px;}
+  .pos-members{gap:24px;flex-wrap:wrap;justify-content:center;}
+  .pos-label{font-size:14px;}
+}
+
 /* MEMORY LANE */
 .memory-lane{
   margin-top:80px;
   padding-top:48px;
   border-top:1px solid rgba(255,255,255,0.1);
+}
+.memory-grid{
+  max-width:1400px;
+  margin:0 auto;
+  padding:0 64px;
 }
 .memory-big{
     width:100%;
@@ -1068,7 +1222,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 @media(max-width:768px){.orbit-memory-title h2{font-size:42px;}.orbit-memory-title::after{width:340px;height:100px;}.orbit-memory-title p{font-size:13px;}}
 @media(max-width:900px){.memory-grid{grid-template-columns:repeat(2,1fr);}}
 @media(max-width:560px){.memory-grid{grid-template-columns:1fr;}}
-
+@media(max-width:768px){.memory-grid{padding:0 24px;}.memory-lane-2425{padding-left:24px;padding-right:24px;}}
 /* When you add photos: .memory-box img { width:100%; height:100%; object-fit:cover; } */
 </style>
 </head>
@@ -1303,42 +1457,48 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 
 </div>
 
-<div class="tg-row five-members">
+<div class="tg-row dual-groups three-groups">
 
-    <div class="tm">
-        <div class="avatar"><img src="pictures/25-26/mahak.jpeg" alt="Mahak"></div>
-        <div class="mname">MAHAK</div>
+    <!-- GAME DEV CORES -->
+    <div class="team-group">
+        <div class="group-members">
+            <div class="tm">
+                <div class="avatar"><img src="pictures/25-26/mahak.jpeg" alt="Mahak"></div>
+                <div class="mname">MAHAK</div>
+            </div>
+            <div class="tm">
+                <div class="avatar"><img src="pictures/25-26/vanisha.jpeg" alt="Vanisha"></div>
+                <div class="mname">VANISHA</div>
+            </div>
+        </div>
+        <div class="tg-label"><span>GAME DEV CORES</span></div>
     </div>
 
-    <div class="tm">
-        <div class="avatar"><img src="pictures/25-26/vanisha.jpeg" alt="Vanisha"></div>
-        <div class="mname">VANISHA</div>
+    <!-- GAME DEV MENTOR -->
+    <div class="team-group">
+        <div class="group-members">
+            <div class="tm">
+                <div class="avatar"><img src="pictures/25-26/priyanshi.jpeg" alt="Priyanshi"></div>
+                <div class="mname">PRIYANSHI</div>
+            </div>
+        </div>
+        <div class="tg-label"><span>GAME DEV MENTOR</span></div>
     </div>
 
-    <div class="tm">
-        <div class="avatar"><img src="pictures/25-26/priyanshi.jpeg" alt="Priyanshi"></div>
-        <div class="mname">PRIYANSHI</div>
+    <!-- EVENT MANAGEMENT CORES -->
+    <div class="team-group">
+        <div class="group-members">
+            <div class="tm">
+                <div class="avatar"><img src="pictures/25-26/aanya.jpeg" alt="Aanya"></div>
+                <div class="mname">AANYA</div>
+            </div>
+            <div class="tm">
+                <div class="avatar"><img src="pictures/25-26/nikita.jpeg" alt="Nikita"></div>
+                <div class="mname">NIKITA</div>
+            </div>
+        </div>
+        <div class="tg-label"><span>EVENT MANAGEMENT CORES</span></div>
     </div>
-
-    <div class="tm">
-        <div class="avatar"><img src="pictures/25-26/aanya.jpeg" alt="Aanya"></div>
-        <div class="mname">AANYA</div>
-    </div>
-
-    <div class="tm">
-        <div class="avatar"><img src="pictures/25-26/nikita.jpeg" alt="Nikita"></div>
-        <div class="mname">NIKITA</div>
-    </div>
-
-</div>
-
-<div class="five-labels">
-
-    <div>GAME DEV CORES</div>
-
-    <div>GAME DEV MENTOR</div>
-
-    <div>EVENT MANAGEMENT CORES</div>
 
 </div>
 </div>
@@ -1483,9 +1643,30 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
     <h1 class="assets-h">DEPLOYED ASSETS</h1>
     <div class="cycle-hdr"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 8v4l3 3M12 3a9 9 0 100 18 9 9 0 000-18z"/></svg><h2>Cycle 25-26</h2><div class="crule"></div></div>
     <div class="game-list">
-      <div class="gc glass"><h3>Velmora: The Fallen Kingdom</h3><p>A three-stage action game set in a corrupted realm on the brink of collapse. A nameless warrior awakens with one purpose and that is to fight through the darkness that consumed Velmora and seal the Gate of Ruin before nothing is left to save.</p><p>Each island presents a distinct challenge: survive relentless zombie waves in Corpse Hollow, protect the villagers of DragonBane from a vicious dragon, and face the Demon King himself. Three islands. Three battles. One chance.</p><div class="credits"><strong>Developed by:</strong> Shraddha Pant (ECE-AI), Neha (CSE-AI), Samriddhi (ECE-AI), Zainab Hussain (MAE)</div><a href="https://codenchibbi.itch.io/velmora" target="_blank" rel="noopener noreferrer" class="lnk">Link</a></div>
-      <div class="gc glass"><h3>Serpent's Second Chance</h3><p>A reimagined Snake and Ladder in the Kingdom of Ascension. Landing on a serpent triggers a mini-game challenge &#8212; Guess the Card, Hangman, or Avoid Falling Objects. Prove your skill and continue unharmed. Fail, and you slide back.</p><p>Climb the ladders, outsmart the serpents, and fight your way to Tile 100.</p><div class="credits"><strong>Developed by:</strong> Ojaswi (CSE), Palak Jain (CSE), Vatika (CSE-AI), Drishti (CSE)</div><a href="#" class="lnk">Link</a></div>
-      <div class="gc glass"><h3>Zero Hour: Escape</h3><p>A psychological escape room where you play as Subject 027, placed inside a controlled cognitive experiment disguised as a cozy, ordinary room. Locked doors, a ticking clock, and intentionally placed objects slowly reveal the truth.</p><p>Navigate slider puzzles, safes, chess logic, card patterns and locks. Escape, and you're fit for deployment. Fail, and the trial concludes without you.</p><div class="credits"><strong>Developed by:</strong> Zainab Tanweer (ECE), Priyanshi Jaiswal (MAC), Astha Singh (MAE), Dishita Gupta (CSE)</div><a href="#" class="lnk">Link</a></div>
+      
+        <div class="gc glass">
+            <h3>Velmora: The Fallen Kingdom</h3>
+            <p>A three-stage action game set in a corrupted realm on the brink of collapse. A nameless warrior awakens with one purpose and that is to fight through the darkness that consumed Velmora and seal the Gate of Ruin before nothing is left to save.</p>
+            <p>Each island presents a distinct challenge: survive relentless zombie waves in Corpse Hollow, protect the villagers of DragonBane from a vicious dragon, and face the Demon King himself. Three islands. Three battles. One chance.</p>
+            <div class="credits">
+                <strong>Developed by:</strong> Shraddha Pant (ECE-AI), Neha (CSE-AI), Samriddhi (ECE-AI), Zainab Hussain (MAE)</div>
+      <a href="https://codenchibbi.itch.io/velmora" target="_blank" rel="noopener noreferrer" class="lnk">Link</a></div>
+      
+      <div class="gc glass">
+        <h3>Serpent's Second Chance</h3>
+        <p>A reimagined Snake and Ladder in the Kingdom of Ascension. Landing on a serpent triggers a mini-game challenge &#8212; Guess the Card, Hangman, or Avoid Falling Objects. Prove your skill and continue unharmed. Fail, and you slide back.</p>
+        <p>Climb the ladders, outsmart the serpents, and fight your way to Tile 100.</p>
+        <div class="credits">
+            <strong>Developed by:</strong> Ojaswi (CSE), Palak Jain (CSE), Vatika (CSE-AI), Drishti (CSE)</div>
+      <a href="#" class="lnk">Link</a></div>
+      
+      <div class="gc glass">
+        <h3>Zero Hour: Escape</h3>
+        <p>A psychological escape room where you play as Subject 027, placed inside a controlled cognitive experiment disguised as a cozy, ordinary room. Locked doors, a ticking clock, and intentionally placed objects slowly reveal the truth.</p>
+        <p>Navigate slider puzzles, safes, chess logic, card patterns and locks. Escape, and you're fit for deployment. Fail, and the trial concludes without you.</p>
+        <div class="credits">
+            <strong>Developed by:</strong> Zainab Tanweer (ECE), Priyanshi Jaiswal (MAC), Astha Singh (MAE), Dishita Gupta (CSE)</div>
+      <a href="https://zainabtanweer.itch.io/zero-hour-escape" target="_blank" rel="noopener noreferrer" class="lnk">Link</a></div>
     </div>
   </div>
 </div>
@@ -1768,125 +1949,136 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 
 <div class="tg-row leadership-row">
 
-    <div class="tm" id="t2627-name1">
+    <div class="tm" id="t2627-mitali">
         <div class="avatar avatar-large">
-            <img src="pictures/26-27/name1.jpeg" alt="Name">
+            <img src="pictures/26-27/mitali.jpeg" alt="Mitali">
         </div>
-        <div class="mname">NAME</div>
+        <div class="mname">MITALI</div>
         <div class="mrole">PRESIDENT</div>
     </div>
 
-    <div class="tm" id="t2627-name2">
+    <div class="tm" id="t2627-vanisha">
         <div class="avatar avatar-large">
-            <img src="pictures/26-27/name2.jpeg" alt="Name">
+            <img src="pictures/26-27/vanisha.jpeg" alt="Vanisha">
         </div>
-        <div class="mname">NAME</div>
+        <div class="mname">VANISHA</div>
         <div class="mrole">VICE PRESIDENT</div>
     </div>
 
-    <div class="tm" id="t2627-name3">
+    <div class="tm" id="t2627-anushka">
         <div class="avatar avatar-large">
-            <img src="pictures/26-27/name3.jpeg" alt="Name">
+            <img src="pictures/26-27/anushka.jpeg" alt="Anushka">
         </div>
-        <div class="mname">NAME</div>
+        <div class="mname">ANUSHKA</div>
         <div class="mrole">TREASURER</div>
     </div>
 
 </div>
 
-<!-- Two paired groups, e.g. Outreach + Media (rename/duplicate as needed) -->
-<div class="tg-row dual-groups">
+<!-- ROW 2: Media & Creative Cores -->
+<div class="tg-row pos-row">
 
-    <!-- GROUP 1 -->
-    <div class="team-group">
+    <div class="pos-box">
+        <div class="pos-members">
 
-        <div class="group-members">
-
-            <div class="tm" id="t2627-name4">
+            <div class="tm" id="t2627-mahak">
                 <div class="avatar">
-                    <img src="pictures/26-27/name4.jpeg" alt="Name">
+                    <img src="pictures/26-27/mahak.jpeg" alt="Mahak">
                 </div>
-                <div class="mname">NAME</div>
+                <div class="mname">MAHAK</div>
             </div>
 
-            <div class="tm" id="t2627-name5">
+            <div class="tm" id="t2627-mehak">
                 <div class="avatar">
-                    <img src="pictures/26-27/name5.jpeg" alt="Name">
+                    <img src="pictures/26-27/mehak.jpeg" alt="Mehak">
                 </div>
-                <div class="mname">NAME</div>
-            </div>
-        </div>
-        <div class="tg-label">
-            <span>GROUP 1 LABEL</span>
-        </div>
-    </div>
-
-    <!-- GROUP 2 -->
-    <div class="team-group">
-
-        <div class="group-members">
-
-            <div class="tm" id="t2627-name6">
-                <div class="avatar">
-                    <img src="pictures/26-27/name6.jpeg" alt="Name">
-                </div>
-                <div class="mname">NAME</div>
-            </div>
-
-            <div class="tm" id="t2627-name7">
-                <div class="avatar">
-                    <img src="pictures/26-27/name7.jpeg" alt="Name">
-                </div>
-                <div class="mname">NAME</div>
+                <div class="mname">MEHAK</div>
             </div>
 
         </div>
-        <div class="tg-label">
-            <span>GROUP 2 LABEL</span>
-        </div>
+        <div class="pos-label">MEDIA &amp; CREATIVE CORES</div>
     </div>
 
 </div>
 
-<!-- Five-member row, e.g. Game Dev Cores / Mentor / Event Management -->
-<div class="tg-row five-members">
+<!-- ROW 3: Development Cores + Development Mentors -->
+<div class="tg-row pos-row">
 
-    <div class="tm">
-        <div class="avatar"><img src="pictures/26-27/name8.jpeg" alt="Name"></div>
-        <div class="mname">NAME</div>
+    <div class="pos-box">
+        <div class="pos-members">
+
+            <div class="tm" id="t2627-shraddha">
+                <div class="avatar"><img src="pictures/26-27/shraddha.jpeg" alt="Shraddha"></div>
+                <div class="mname">SHRADDHA</div>
+            </div>
+
+            <div class="tm" id="t2627-zainab">
+                <div class="avatar"><img src="pictures/26-27/zainab.jpeg" alt="Zainab"></div>
+                <div class="mname">ZAINAB</div>
+            </div>
+
+        </div>
+        <div class="pos-label">DEVELOPMENT CORES</div>
     </div>
 
-    <div class="tm">
-        <div class="avatar"><img src="pictures/26-27/name9.jpeg" alt="Name"></div>
-        <div class="mname">NAME</div>
-    </div>
+    <div class="pos-box">
+        <div class="pos-members">
 
-    <div class="tm">
-        <div class="avatar"><img src="pictures/26-27/name10.jpeg" alt="Name"></div>
-        <div class="mname">NAME</div>
-    </div>
+            <div class="tm" id="t2627-priyanshi">
+                <div class="avatar"><img src="pictures/26-27/priyanshi.jpeg" alt="Priyanshi"></div>
+                <div class="mname">PRIYANSHI</div>
+            </div>
 
-    <div class="tm">
-        <div class="avatar"><img src="pictures/26-27/name11.jpeg" alt="Name"></div>
-        <div class="mname">NAME</div>
-    </div>
+            <div class="tm" id="t2627-ojaswi">
+                <div class="avatar"><img src="pictures/26-27/ojaswi.jpeg" alt="Ojaswi"></div>
+                <div class="mname">OJASWI</div>
+            </div>
 
-    <div class="tm">
-        <div class="avatar"><img src="pictures/26-27/name12.jpeg" alt="Name"></div>
-        <div class="mname">NAME</div>
+        </div>
+        <div class="pos-label">DEVELOPMENT MENTORS</div>
     </div>
 
 </div>
 
-<div class="five-labels">
+<!-- ROW 4: Outreach Cores + Event Management Cores -->
+<div class="tg-row pos-row">
 
-    <div>LABEL 1</div>
+    <div class="pos-box">
+        <div class="pos-members">
 
-    <div>LABEL 2</div>
+            <div class="tm" id="t2627-sumaria">
+                <div class="avatar"><img src="pictures/26-27/sumaria.jpeg" alt="Sumaria"></div>
+                <div class="mname">SUMARIA</div>
+            </div>
 
-    <div>LABEL 3</div>
+            <div class="tm" id="t2627-outreach2">
+                <div class="avatar"><img src="pictures/26-27/outreach2.jpeg" alt="Name"></div>
+                <div class="mname">NAME</div>
+            </div>
+
+        </div>
+        <div class="pos-label">OUTREACH CORES</div>
+    </div>
+
+    <div class="pos-box">
+        <div class="pos-members">
+
+            <div class="tm" id="t2627-shreya">
+                <div class="avatar"><img src="pictures/26-27/shreya.jpeg" alt="Shreya"></div>
+                <div class="mname">SHREYA</div>
+            </div>
+
+            <div class="tm" id="t2627-event2">
+                <div class="avatar"><img src="pictures/26-27/event2.jpeg" alt="Name"></div>
+                <div class="mname">NAME</div>
+            </div>
+
+        </div>
+        <div class="pos-label">EVENT MANAGEMENT CORES</div>
+    </div>
 
 </div>
+
 </div>
 </div>
 

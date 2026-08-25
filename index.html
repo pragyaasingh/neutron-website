@@ -169,7 +169,9 @@ nav{
     background: radial-gradient(
         68.27% 68.88% at 35.92% 2.32%,
         rgb(1, 13, 125) 0%,
-        rgba(79,14,171,0.60) 60%,
+        rgba(40,14,148,0.75) 25%,
+        rgba(79,14,171,0.60) 50%,
+        rgba(112,33,198,0.35) 75%,
         rgba(144,53,224,0) 100%
     );
     z-index:0;
@@ -500,34 +502,34 @@ body{
 }
 /* 3D PLANETS */
 .planet{position:absolute;border-radius:50%;pointer-events:none;animation:pBreath 8s ease-in-out infinite;}
-.planet-events{
-    width:clamp(480px,220vw,1400px);height:clamp(480px,220vw,1400px);top:112%;left:50%;
-    transform:translate(-50%,-50%) rotate(-14.562deg);border-radius:50%;
-    background:radial-gradient(
-        68.27% 68.88% at 35.92% 2.32%,
-        rgb(192, 76, 3) 0%,
-        rgba(171,103,14,0.60) 46.15%,
-        rgba(224,213,53,0) 100%
-    );
-}
 .planet-games{
-    width:clamp(480px,220vw,1400px);height:clamp(480px,220vw,1400px);top:112%;left:50%;
+    width:1400px;height:1400px;top:112%;left:50%;
     transform:translate(-50%,-50%) rotate(-14.562deg);border-radius:50%;
     background: radial-gradient(
     68.27% 68.88% at 35.92% 2.32%,
-    rgba(225, 0, 154, 1) 0%,
-    rgba(171, 14, 168, 0.6) 46.15%,
+    rgb(236, 26, 173) 0%,
+    rgba(145, 11, 120, 0.6) 46.15%,
     rgba(207, 53, 224, 0) 100%
 );
+}
+.planet-events{
+    width:1400px;height:1400px;top:112%;left:50%;
+    transform:translate(-50%,-50%) rotate(-14.562deg);border-radius:50%;
+    background:radial-gradient(
+    68.27% 68.88% at 35.92% 2.32%,
+    rgb(26, 185, 185) 0%,
+    rgba(5, 102, 109, 0.6) 46.15%,
+    rgba(224,213,53,0) 100%
+    );
 }
 .planet-teams{
     width:clamp(480px,220vw,1400px);height:clamp(480px,220vw,1400px);top:112%;left:50%;
     transform:translate(-50%,-50%) rotate(-14.562deg);border-radius:50%;
     background: radial-gradient(
     68.27% 68.88% at 35.92% 2.32%,
-    rgb(21, 154, 101) 0%,
-    rgba(8, 131, 118, 0.6) 46%,
-    rgba(1, 67, 69, 0) 100%
+    rgb(192, 154, 3) 0%,
+    rgba(151, 110, 6, 0.6) 46.15%,
+    rgba(224,213,53,0) 100%
 );
 }
 @keyframes pBreath{0%,100%{filter:brightness(1);}50%{filter:brightness(1.06);}}
@@ -1842,12 +1844,88 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
   </div>
   <div class="tl-wrap">
     <div class="tl-spine"></div>
-    <div class="tl-row left"><div class="tl-dot"></div><div class="tc glass"><div class="tc-top"><span class="log-tag">Logs: 01</span><div class="ti"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 17L13 3L11 11L21 7L11 21L13 13L3 17Z"/></svg></div></div><h3>Orientation 25-26</h3><p>The year's first launch sequence brought students aboard Neutron, exploring its mission, crew, and possibilities in game development.</p></div><div class="td">12 November, 2025</div></div>
-    <div class="tl-row right"><div class="tl-dot"></div><div class="td">25 January, 2026</div><div class="tc glass"><div class="tc-top"><span class="log-tag">Logs: 02</span><div class="ti"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></div></div><h3>Anti-Chess Tournament</h3><div class="tmeta">Online Protocol</div><p>In this tournament, the goal was to lose all pieces to dominate the leaderboard. Pure inverse strategy and a mind-bending challenge of tactical self-destruction.</p></div></div>
-    <div class="tl-row left"><div class="tl-dot"></div><div class="tc glass"><div class="tc-top"><span class="log-tag">Logs: 03</span><div class="ti"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="8" width="20" height="10" rx="4"/><circle cx="8" cy="13" r="1" fill="currentColor"/><circle cx="6" cy="11" r="1" fill="currentColor"/></svg></div></div><h3>GameFusion Cup</h3><div class="tmeta">In Collaboration with Innerve</div><p>A multi-game tournament where teams of 2 compete across Anti-chess, Smash Karts along with a Subway Surfers bonus round.</p></div><div class="td">17 March, 2026</div></div>
-    <div class="tl-row right"><div class="tl-dot"></div><div class="td">4 April, 2026</div><div class="tc glass"><div class="tc-top"><span class="log-tag">Logs: 04</span><div class="ti"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 17V7l8-4 8 4v10l-8 4-8-4z"/><path d="M4 7l8 4 8-4M12 11v10"/></svg></div></div><h3>Unity Game Dev Workshop</h3><div class="tmeta">With Apogee (BITS Pilani)</div><p>A hands-on Unity 6 workshop where members built two complete 3D projects while learning systems-driven game development.</p></div></div>
-    <div class="tl-row left"><div class="tl-dot"></div><div class="tc glass"><div class="tc-top"><span class="log-tag">Logs: 05</span><div class="ti"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="9"/></svg></div></div><h3>NEUTRON ORIGINALS: Game Arena</h3><p>A game showcase where the Development team presented their original game projects, competing for best pitch and best overall.</p></div><div class="td">27 April, 2026</div></div>
-    <div class="tl-row right"><div class="tl-dot"></div><div class="td">27 April, 2026</div><div class="tc glass"><div class="tc-top"><span class="log-tag">Logs: 06</span><div class="ti"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 21h8M12 3v12M8 8a4 4 0 008 0"/></svg></div></div><h3>Felicitation 25-26</h3><p>A felicitation ceremony celebrating Neutron's finest, honoring the best members with medals in recognition of their contributions and achievements.</p></div></div>
+
+<div class="tl-row left">
+    <div class="tl-dot"></div>
+    <div class="tc glass">
+        <div class="tc-top">
+        <span class="log-tag">Logs: 01</span>
+        <div class="ti"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 17L13 3L11 11L21 7L11 21L13 13L3 17Z"/></svg>
+        </div>
+    </div>
+    <h3>Orientation 25-26</h3>
+    <p>The year's first launch sequence brought students aboard Neutron, exploring its mission, crew, and possibilities in game development.</p>
+    </div>
+    <div class="td">12 November, 2025</div>
+</div>
+    
+    <div class="tl-row right">
+        <div class="tl-dot"></div>
+        <div class="td">25 January, 2026</div>
+        <div class="tc glass"><div class="tc-top">
+            <span class="log-tag">Logs: 02</span>
+            <div class="ti"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+            </div>
+        </div>
+        <h3>Anti-Chess Tournament</h3>
+        <div class="tmeta">Online Protocol</div><p>In this tournament, the goal was to lose all pieces to dominate the leaderboard. Pure inverse strategy and a mind-bending challenge of tactical self-destruction.</p>
+    </div>
+</div>
+    
+    <div class="tl-row left">
+        <div class="tl-dot"></div>
+        <div class="tc glass"><div class="tc-top">
+            <span class="log-tag">Logs: 03</span>
+            <div class="ti"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="8" width="20" height="10" rx="4"/><circle cx="8" cy="13" r="1" fill="currentColor"/><circle cx="6" cy="11" r="1" fill="currentColor"/></svg>
+            </div>
+        </div>
+        <h3>GameFusion Cup</h3>
+        <div class="tmeta">In Collaboration with Innerve</div>
+        <p>A multi-game tournament where teams of 2 compete across Anti-chess, Smash Karts along with a Subway Surfers bonus round.</p>
+    </div>
+    <div class="td">17 March, 2026</div></div>
+    
+    <div class="tl-row right">
+        <div class="tl-dot"></div>
+        <div class="td">4 April, 2026</div>
+        <div class="tc glass"><div class="tc-top">
+            <span class="log-tag">Logs: 04</span>
+            <div class="ti"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 17V7l8-4 8 4v10l-8 4-8-4z"/><path d="M4 7l8 4 8-4M12 11v10"/></svg>
+            </div>
+        </div>
+        <h3>Unity Game Dev Workshop</h3>
+        <div class="tmeta">With Apogee (BITS Pilani)</div>
+        <p>A hands-on Unity 6 workshop where members built two complete 3D projects while learning systems-driven game development.</p>
+    </div>
+</div>
+    
+    <div class="tl-row left">
+        <div class="tl-dot"></div>
+        <div class="td">27 April, 2026</div>
+        <div class="tc glass"><div class="tc-top">
+            <span class="log-tag">Logs: 05</span>
+            <div class="ti"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="9"/></svg>
+            </div>
+        </div>
+        <h3>NEUTRON ORIGINALS: Game Arena</h3>
+        <p>A game showcase where the Development team presented their original game projects, competing for best pitch and best overall.</p>
+        <p>Serpent: The Second Chance took home Best Pitch and Velmora claimed Best Overall.</p>
+    </div>
+</div>
+   
+    <div class="tl-row right">
+        <div class="tl-dot"></div>
+        <div class="td">27 April, 2026</div>
+        <div class="tc glass"><div class="tc-top">
+            <span class="log-tag">Logs: 06</span>
+            <div class="ti"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M8 21h8M12 3v12M8 8a4 4 0 008 0"/></svg>
+            </div>
+        </div>
+        <h3>Felicitation 25-26</h3>
+        <p>A felicitation ceremony celebrating Neutron's finest, honoring the best members with medals in recognition of their contributions and achievements.</p>
+    </div>
+</div>
   </div>
 
   <!-- MEMORY LANE 25-26 -->

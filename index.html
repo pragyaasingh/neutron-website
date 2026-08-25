@@ -357,11 +357,11 @@ body{
     align-items:center;
     justify-content:space-between;
     gap:10px;
-    min-width:130px;
-    height:44px;
-    padding:6px 12px;
+    min-width:150px;
+    height:52px;
+    padding:8px 18px;
     border:1px solid rgba(93, 218, 247, 0.5);
-    border-radius:6px;
+    border-radius:8px;
     background:rgba(159,140,240,0.06);
     color:var(--cyan);
     font-family:'JetBrains Mono',monospace;
@@ -377,6 +377,11 @@ body{
     border-color:var(--cyan);
     background:rgba(159,140,240,0.14);
     box-shadow:0 0 18px rgba(159,140,240,0.18);
+}
+@media(max-width:640px){
+    .bro-row{flex-wrap:wrap;gap:16px;padding:26px 22px;}
+    .bro-row > span{font-size:24px;}
+    .link-btn{width:100%;justify-content:center;height:54px;font-size:17px;}
 }
 .link-btn .rocket-icon{
     flex-shrink:0;
@@ -496,7 +501,7 @@ body{
 /* 3D PLANETS */
 .planet{position:absolute;border-radius:50%;pointer-events:none;animation:pBreath 8s ease-in-out infinite;}
 .planet-events{
-    width:1400px;height:1400px;top:112%;left:50%;
+    width:clamp(480px,220vw,1400px);height:clamp(480px,220vw,1400px);top:112%;left:50%;
     transform:translate(-50%,-50%) rotate(-14.562deg);border-radius:50%;
     background:radial-gradient(
         68.27% 68.88% at 35.92% 2.32%,
@@ -506,7 +511,7 @@ body{
     );
 }
 .planet-games{
-    width:1400px;height:1400px;top:112%;left:50%;
+    width:clamp(480px,220vw,1400px);height:clamp(480px,220vw,1400px);top:112%;left:50%;
     transform:translate(-50%,-50%) rotate(-14.562deg);border-radius:50%;
     background: radial-gradient(
     68.27% 68.88% at 35.92% 2.32%,
@@ -516,7 +521,7 @@ body{
 );
 }
 .planet-teams{
-    width:1400px;height:1400px;top:112%;left:50%;
+    width:clamp(480px,220vw,1400px);height:clamp(480px,220vw,1400px);top:112%;left:50%;
     transform:translate(-50%,-50%) rotate(-14.562deg);border-radius:50%;
     background: radial-gradient(
     68.27% 68.88% at 35.92% 2.32%,
@@ -608,6 +613,7 @@ body{
 .crule{flex:1;height:1px;background:linear-gradient(to right,rgba(255,255,255,0.18),transparent);}
 .game-list{display:flex;flex-direction:column;gap:24px;}
 .gc{border-radius:14px;padding:32px 36px;position:relative;overflow:hidden;transition:transform .2s,box-shadow .2s;}
+@media(max-width:640px){.gc{padding:22px 18px;}}
 .gc:hover{transform:translateY(-3px);box-shadow:0 18px 52px rgba(0,0,0,0.45);}
 .gc::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1.2px;background:linear-gradient(160deg,rgba(255,255,255,0.35) 0%,rgba(255,255,255,0.06) 40%,rgba(255,255,255,0) 60%,rgba(159,140,240,0.25) 100%);-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;}
 .gc h3{
@@ -1963,7 +1969,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
                 
                 <div class="credits">
                 <strong>Developed by:</strong> Shraddha Pant (ECE-AI), Neha (CSE-AI), Samriddhi (ECE-AI), Zainab Hussain (MAE)</div>
-      <a href="https://codenchibbi.itch.io/velmora" target="_blank" rel="noopener noreferrer" class="lnk"><span class="link-text">Link</span><span class="planet-icon"><svg class="rocket-icon" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></a></div>
+      <a href="https://codenchibbi.itch.io/velmora" target="_blank" rel="noopener noreferrer" class="lnk"><span class="link-text">Link</span><span class="planet-icon"><svg class="rocket-icon" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></span></a></div>
       
       <div class="gc glass">
         <h3>Serpent's Second Chance</h3>
@@ -1980,7 +1986,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 
             <div class="credits">
             <strong>Developed by:</strong> Ojaswi (CSE), Palak Jain (CSE), Vatika (CSE-AI), Drishti (CSE)</div>
-      <a href="#" class="lnk"><span class="link-text">Link</span><span class="planet-icon"><svg class="rocket-icon" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></a></div>
+      <a href="#" class="lnk"><span class="link-text">Link</span><span class="planet-icon"><svg class="rocket-icon" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></span></a></div>
       
       <div class="gc glass">
         <h3>Zero Hour: Escape</h3>
@@ -1995,7 +2001,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 
             <div class="credits">
             <strong>Developed by:</strong> Zainab Tanweer (ECE), Priyanshi Jaiswal (MAC), Astha Singh (MAE), Dishita Gupta (CSE)</div>
-      <a href="https://zainabtanweer.itch.io/zero-hour-escape" target="_blank" rel="noopener noreferrer" class="lnk"><span class="link-text">Link</span><span class="planet-icon"><svg class="rocket-icon" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></a></div>
+      <a href="https://zainabtanweer.itch.io/zero-hour-escape" target="_blank" rel="noopener noreferrer" class="lnk"><span class="link-text">Link</span><span class="planet-icon"><svg class="rocket-icon" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></span></a></div>
     </div>
   </div>
 </div>
@@ -2022,7 +2028,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 
             <div class="credits">
             <strong>Developed by:</strong> Kavya Chaudhari (CSE), Palak Bhatia (AIML), Lavanaya Khosla (CSE), Aksa (CSE), Anisha Gupta (CSE-AI), Navya Gupta (ECE), Priya Kumari (CSE), Priyanshi (ECE-AI), Trisha Tomy (IT), Yashika Ashra (MAE)</div>
-            <a href="https://retrofusionist.itch.io/astrodrifting" target="_blank" rel="noopener noreferrer" class="lnk"><span class="link-text">Link</span><span class="planet-icon"><svg class="rocket-icon" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></a></div>
+            <a href="https://retrofusionist.itch.io/astrodrifting" target="_blank" rel="noopener noreferrer" class="lnk"><span class="link-text">Link</span><span class="planet-icon"><svg class="rocket-icon" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></span></a></div>
       
       <div class="gc glass">
         <h3>Pentara</h3>
@@ -2047,7 +2053,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 
             <div class="credits">
             <strong>Developed by:</strong> Mahak (CSE-AI), Khushi (ECE-AI), Vanisha (CSE), Kritika (CSE), Kirti (CSE), Ekamjot (CSE)</div>
-            <a href="https://github.com/Mahak0747/Pentara" target="_blank" rel="noopener noreferrer" class="lnk"><span class="link-text">Link</span><span class="planet-icon"><svg class="rocket-icon" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></a></div>
+            <a href="https://github.com/Mahak0747/Pentara" target="_blank" rel="noopener noreferrer" class="lnk"><span class="link-text">Link</span><span class="planet-icon"><svg class="rocket-icon" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></span></a></div>
       
       <div class="gc glass">
         <h3>Blingo</h3>
@@ -2058,7 +2064,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 
             <div class="credits">
             <strong>Developed by:</strong> Vansika Rana (CSE), Jyoti Choudhary (CSE-AI)</div>
-            <a href="#" target="_blank" rel="noopener noreferrer" class="lnk"><span class="link-text">Link</span><span class="planet-icon"><svg class="rocket-icon" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></a></div>
+            <a href="#" target="_blank" rel="noopener noreferrer" class="lnk"><span class="link-text">Link</span><span class="planet-icon"><svg class="rocket-icon" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></span></a></div>
      
       <div class="gc glass">
         <h3>Fred in the Fright House</h3>
@@ -2074,7 +2080,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 
             <div class="credits">
             <strong>Developed by:</strong> Akanksha Bathla (CSE), Harshita Agarwal (CSE-AI), Prachi Kumari (CSE-AI), Swarnima (CSE), Vanshika (CSE-AI), Vedika (CSE-AI)</div>
-            <a href="https://akankshabathla.itch.io/john-lemons-haunted-jaunt?secret=cpOJPYK78LsOQhbtW0ozNffqPKc" target="_blank" rel="noopener noreferrer" class="lnk"><span class="link-text">Link</span><span class="planet-icon"><svg class="rocket-icon" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></a></div>
+            <a href="https://akankshabathla.itch.io/john-lemons-haunted-jaunt?secret=cpOJPYK78LsOQhbtW0ozNffqPKc" target="_blank" rel="noopener noreferrer" class="lnk"><span class="link-text">Link</span><span class="planet-icon"><svg class="rocket-icon" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></span></a></div>
     </div>
   </div>
 </div>
